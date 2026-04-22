@@ -79,7 +79,7 @@ In this task, you will configure password writeback using Microsoft Entra Connec
 
 In this task, you will enable self-service password reset for users in your tenant via Microsoft Entra Admin Center.
 
-1. Open **Microsoft Edge** browser in your LabVM, and navigate to Microsoft Entra Admin Center using the following URL:
+1. Open the **Microsoft Edge** browser in your LabVM, and navigate to Microsoft Entra Admin Center using the following URL:
 
     ``` 
     https://entra.microsoft.com/
@@ -134,13 +134,13 @@ In this task, you will validate self-service password reset by changing the pass
 
 1. On the **Sign in** page, enter **`msnider@xxxxxx.onmicrosoft.com` (1)** and then select **Next (2)**.
 
-    >**Note**: Replace xxxx with the tenantname provided in the lab credentials.
+    >**Note**: Replace xxxx with the tenant name provided in the lab credentials.
 
     ![](../media/L2T3S2-0903.png)
 
 1. On the **Enter password** page, enter **Pa55-w.rd!** or the password that you have entered and then select **Sign in**. 
 
-    > **Note**: If prompted with MFA, please follow the below steps or skip the steps and continue from step 13 if MFA is already enabled.
+    > **Note**: If prompted with MFA, please follow the steps below or skip the steps and continue from step 13 if MFA is already enabled.
 
 1. At the **Let's keep your account secure** prompt, select **Next** thrice
 
