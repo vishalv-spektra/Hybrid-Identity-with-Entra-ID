@@ -143,18 +143,24 @@ In this task, you will add user accounts to the domain controller in Active Dire
       
 1. In the **New Object - User** window, enter and confirm the password **(1)**, uncheck **User must change password at next logon (2)**, and then click **Next (3)**.
     
-    ![](../media/sec-hybr-apr-ex1-g17.png)
+   ![](../media/sec-hybr-apr-ex1-g17.png)
 
 1. On the final page, review the user details, and then click **Finish**.
    
-    ![](../media/sec-hybr-apr-ex1-g19.png)
+   ![](../media/sec-hybr-apr-ex1-g19.png)
+
+   > **Note:** Repeat the same steps to create the remaining users using the provided details.
 
 ## Task 3: Configure directory synchronization with Microsoft Entra Connect
 In this task, you will configure directory synchronization between your on-premises Active Directory and Microsoft Entra ID using Entra Connect. This involves downloading and installing Azure AD Connect, providing necessary credentials for synchronization, and configuring synchronization options. By completing this task, you will enable the seamless synchronization of user identities between on-premises AD and Entra ID.
 
 1. On the taskbar, select **Microsoft Edge**.
 
-1. In the address bar, enter `https://www.microsoft.com/en-us/download/details.aspx?id=47594`.
+1. In the address bar, enter the provided URL, and then press **Enter**.
+
+   ```
+   https://www.microsoft.com/en-us/download/details.aspx?id=47594
+   ```
 
 1. On the Microsoft Entra connect, select **Download**. 
 
