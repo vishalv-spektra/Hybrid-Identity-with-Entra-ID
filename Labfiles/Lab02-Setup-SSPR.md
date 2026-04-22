@@ -101,9 +101,9 @@ In this task, you will enable self-service password reset for users in your tena
 
 1. For the **Number of questions required to register (4)**, select **3**.
 
-1. For the **Number of questions required to reset (5)**, select **3**. Click on select **No security questions configured (6)**.
+1. On the **Password reset | Authentication methods (1)** blade, select **3** for **Number of questions required to reset (5)**, and then select **No security questions configured (6)**.
 
-    ![](../media/L2T2S9-0903.png)
+    ![](../media/sec-hybr-apr2-ex2-g9.png)
 
 1. In the Select security questions, select **Predefined (1)**. Select three questions **(2)** of your choice, and then select **Ok (3)**.
 
