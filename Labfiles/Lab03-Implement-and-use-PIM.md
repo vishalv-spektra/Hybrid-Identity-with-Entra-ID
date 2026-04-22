@@ -25,27 +25,27 @@ In this task, you will assign the Global Administrator role to the users from Mi
    - Username : **<inject key="AzureAdUserEmail"></inject>**
    - Password : **<inject key="AzureAdUserPassword"></inject>**
 
-2. Search **(1)** for and then select **Microsoft Entra Privileged Identity Management (2)**.
+1. Search **(1)** for and then select **Microsoft Entra Privileged Identity Management (2)**.
 
     ![](../media/L3T1S2.1-0903.png)
 
-3. In the Privileged Identity Management page, in the left navigation, select **Microsoft Entra roles.**
+1. In the Privileged Identity Management page, in the left navigation, select **Microsoft Entra roles.**
 
     ![](../media/lab3-1.png)
 
-4. In the left navigation menu, under **Manage**, select **Roles** to see the list of Entra roles.
+1. In the left navigation menu, under **Manage**, select **Roles** to see the list of Entra roles.
 
     ![](../media/lab3-2.png)
 
-5. On the top menu, select + **Add assignments**.
+1. On the top menu, select + **Add assignments**.
 
     ![](../media/lab3-3.png)
 
-6. In the **Add assignments** page, select the **Select role** menu and then select **Global Administrator (1)**.
+1. In the **Add assignments** page, select the **Select role** menu and then select **Global Administrator (1)**.
 
-7. Under **Select member(s),** select **No member selected**.
+1. Under **Select member(s),** select **No member selected**.
 
-8. In the Select members pane, select the following users **(3)** and then choose **Select (4)**.
+1. In the Select members pane, select the following users **(3)** and then choose **Select (4)**.
 
     | Name           | 
       | -------------- | 
@@ -56,21 +56,21 @@ In this task, you will assign the Global Administrator role to the users from Mi
 
     ![](../media/L3T1S8-0903.png)    
 
-9. Select **Next (5)**.
+1. Select **Next (5)**.
 
-10. On the **Settings** tab, under **Assignment type**, select **Eligible (1)**.
+1. On the **Settings** tab, under **Assignment type**, select **Eligible (1)**.
 
    - **Eligible** assignments require the member of the role to act to use the role. Actions might include performing a multi-factor authentication (MFA) check, providing a business justification, or requesting approval from designated approvers.
 
    - **Active** assignments do not require the member to perform any action to use the role. Members assigned as active have the privileges always assigned to the role.
 
-11. **Uncheck (2)** the permanently eligible. Specify an assignment duration by changing the **start and end dates and times (3)**. 
+1. **Uncheck (2)** the permanently eligible. Specify an assignment duration by changing the **start and end dates and times (3)**. 
 
-12. When finished, select **Assign (4)**.
+1. When finished, select **Assign (4)**.
 
     ![](../media/L3T1S12-0903.png)
 
-13. After the new role assignment is created, a status notification is displayed.
+1. After the new role assignment is created, a status notification is displayed.
 
 ### Task 2 - Update or remove an existing Entra role assignment
 
