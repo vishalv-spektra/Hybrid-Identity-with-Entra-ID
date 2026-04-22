@@ -1,5 +1,7 @@
 # Lab 1: Setup Hybrid Identity with On-Prem AD and Entra ID
 
+#### Estimated Duration: 60 Minutes
+
 ## Lab Overview 
 This lab focuses on setting up a hybrid identity solution using on-premises Active Directory (AD) and Microsoft Entra ID. It guides users through the process of configuring Active Directory on a Windows Server, adding users/groups to the domain controller, and configuring directory synchronization with Microsoft Entra Connect to sync identities between on-premises AD and Entra ID.
 
@@ -13,8 +15,6 @@ In this lab, you will perform the following:
 - Task 2: Adding users or groups in your Domain Controller
 - Task 3: Configure directory synchronization with Entra ID Connect
 - Task 4: Verify synchronization in Entra ID
-
-## Estimated timing: 90 minutes
 
 ## Architecture Diagram
 
