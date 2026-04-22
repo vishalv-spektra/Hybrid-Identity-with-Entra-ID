@@ -95,15 +95,14 @@ In this task, you will enable self-service password reset for users in your tena
 
     ![](../media/lab2-t2.png)
 
-1. On the **Password reset | Properties** blade, select **Authentication methods (1)**.
+1. On the **Password reset | Properties** blade, select **Authentication methods (1)**, and then configure the following:
+   - Ensure **Mobile app code, Email, and Mobile phone (2)** are selected.
+   - Select **Security questions (3)**.
+   - Set **3** for **Number of questions required to register (4)**.
+   - Set **3** for **Number of questions required to reset (5)**.
+   - Click on **security questions configured (6)**.
 
-1. For the methods available to users, ensure that **Mobile Phone and Email (2)** are selected, and then select **Security Questions (3)**.
-
-1. For the **Number of questions required to register (4)**, select **3**.
-
-1. On the **Password reset | Authentication methods (1)** blade, select **3** for **Number of questions required to reset (5)**, and then select **No security questions configured (6)**.
-
-    ![](../media/sec-hybr-apr2-ex2-g9.png)
+        ![](../media/sec-hybr-apr2-ex2-g9.png)
 
 1. In the Select security questions, select **Predefined (1)**. Select three questions **(2)** of your choice, and then select **Ok (3)**.
 
