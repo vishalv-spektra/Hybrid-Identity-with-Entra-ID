@@ -13,7 +13,7 @@ In this lab, you will perform the following:
 - Task 2: Add Diagnostic setting to collect audit and signin logs
 - Task 3: Verify the logs in the workspace
 
-### Task 1 - Create Log Analytics Workspace
+### Task 1: Create Log Analytics Workspace
 
 In this task, you will create a Log Analytics workspace to store the log information and analyze the machines onboarded through Azure Arc.
 
@@ -27,23 +27,27 @@ In this task, you will create a Log Analytics workspace to store the log informa
    > - Username : **<inject key="AzureAdUserEmail"></inject>**
    > - Password : **<inject key="AzureAdUserPassword"></inject>**
 
-1. In the Search bar of the Azure portal, type **Log Analytics workspace (1)**, then select **Log Analytics workspaces (2)**. Click on + **Create** to create a new workspace.
+1. In the Search bar of the Azure portal, type **Log Analytics workspace (1)**, then select **Log Analytics workspaces (2)**.
 
    ![](../media/L4T1S2-0903.png)
+
+1. Click on + **Create** to create a new workspace.
+
+   ![](../media/sec-hybr-apr3-ex3-g2.png)
     
 1. On the Create Log Analytics workspace page, add the below settings and click on **Review + Create (4)**.
 
-      | Setting | Value|
-      |----------|--------|
-      | Resource Group | **hybrid-rg (1)**|
-      | Name | **log-analytics<inject key="DeploymentID" enableCopy="false"/> (2)**|
-      | Region | **East US (3)**|
+   | Setting | Value|
+   |----------|--------|
+   | Resource Group | **hybrid-rg (1)**|
+   | Name | **log-analytics<inject key="DeploymentID" enableCopy="false"/> (2)**|
+   | Region | **East US (3)**|
 
-   ![](../media/lab4-1.png)
+   ![](../media/sec-hybr-apr3-ex3-g3.png)
 
 1. Once the workspace validation has passed, select **Create**. Wait for the new workspace to be provisioned, this may take a few minutes.
 
-   ![](../media/lab4-2.png)
+   ![](../media/sec-hybr-apr3-ex3-g4.png)
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
     > - Scroll down in the lab guide and hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -52,7 +56,7 @@ In this task, you will create a Log Analytics workspace to store the log informa
 
     <validation step="abc96da1-739e-47e8-a627-b36299a4f02b" />
 
-### Task 2 - Add Diagnostic setting to collect audit and signin logs
+### Task 2: Add Diagnostic setting to collect audit and signin logs
 
 In this task, you will configure diagnostic settings on log analytics workspace to collect audit and sign-in logs.
 
@@ -101,7 +105,7 @@ In this task, you will configure diagnostic settings on log analytics workspace 
 
    >**Note**: Wait for about 15 mins for logs ingestion to happen and proceed with the next task.
 
-### Task 3 - Verify the logs in the workspace
+### Task 3: Verify the logs in the workspace
 
 In this task, you will verify the logs collected in the Log Analytics workspace.
 
