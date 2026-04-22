@@ -23,43 +23,47 @@ In this lab, you will perform the following:
 ## Task 1: Active Directory Setup
 In this task, you will set up Active Directory Domain Services on a Windows Server. This involves launching Server Manager, adding roles and features, selecting Active Directory Domain Services, and promoting the server to a domain controller. By completing this task, you will establish the foundation for managing users, groups, and other objects within your domain.
 
-1. Once the VM is launched, press the Windows Logo Key and search for **Server Manager**. An application should show up on the list. Click on it to launch the program.
+1. Select the **Start (1)** icon, and then choose **Server Manager (2)** from the menu.
  
     ![](../media/lab1-1.png)
  
-1. Look for **Manage** on the top right of the menu bar. Click on it and then select **Add Roles and Features**. A pop-up window will open immediately. This pop-up window is the installer wizard that guides you with the roles and features setup.
+1. In **Server Manager**, select **Manage (1)**, and then choose **Add Roles and Features (2)**.
 
     ![](../media/lab1-2.png)
    
-1. On the left side of the window, you’ll see a list of all the checkpoints you encounter in this stage. Click **Next**.
+1. On the **Before you begin** page, select **Next**.
 
-    ![](../media/lab1-3.png)  
+    ![](../media/sec-hybr-apr-ex1-g1.png)  
  
-1. At the **Installation Type** checkpoint select **Role-based or feature based installation** radio button and then click **Next**.
+1. On the **Installation Type** page, select **Role-based or feature-based installation (1)**, and then click **Next (2)**.
 
-   ![](../media/lab1-4.png)
+   ![](../media/sec-hybr-apr-ex1-g2.png)
    
-1. On the **Server Selection** checkpoint, select Select a **server from the server pool** radio button. This lists a server installed on your machine. Please, click on the desired server once to select it and click **Next**.
+1. On the **Server Selection** page, select **Select a server from the server pool (1)**, choose the server, and then click **Next (2)**.
 
-   ![](../media/lab1-5.png)
+   ![](../media/sec-hybr-apr-ex1-g3.png)
    
-1. At the **Select Server Roles** checkpoint, select the role for the server. In the centre of the window, there is a list of all the roles that you can assign to your server machine. Search for **Active Directory Domain Services**.
+1. On the **Server Roles** page, select **Active Directory Domain Services (1)**, and in the pop-up, click **Add Features (2)**.
 
    ![](../media/lab1-6.png)
-   
-1. Next, a pop-up window will be displayed. This is the checkpoint for adding new features. Navigate on the **Add features** button at the bottom of the window and a list of available features will be displayed.
-   
-1. Next simply click **next** without making modifications to any other settings.
 
-   ![](../media/lab1-7.png) 
+1. On the **Server Roles** page, click **Next**.
+
+   ![](../media/sec-hybr-apr-ex1-g4.png)
+   
+1. On the **Features** page, click **Next** without making modifications to any other settings.
+
+   ![](../media/sec-hybr-apr-ex1-g5.png) 
   
 1. You will be redirected to the adding **Active Directory Domain Services** feature once the previous step is complete. On the installer wizard window, click **Next**.
 
    ![](../media/lab1-8.png)
-    
-1. You’ll see a summary of your selected options here. Have a look at them carefully, and if you think you’ve made a mistake at any of the earlier checkpoints, you can go back and fix it by clicking “previous.” Then, click **Install** button, once you’re satisfied with your selections at the “Confirmation” checkpoint.
 
-   ![](../media/lab1-9.png) 
+1. On the **Confirmation** page, review the selected options, and then click **Install**.
+
+   ![](../media/sec-hybr-apr-ex1-g6.png)
+
+   > **Note:** If you need to make changes, click **Previous** to go back and update the settings, and once confirmed, click **Install** on the **Confirmation** page.
   
 1. The wizard will then begin installation. The time of install depends on your machine’s hardware configuration and what features you’ve selected to be installed. Please make sure not to interrupt the installation. Once the installation is complete, click the **Close** button.
 
@@ -72,36 +76,44 @@ In this task, you will set up Active Directory Domain Services on a Windows Serv
 1. Look for the **Promote this server to a domain controller** option and click on it.
 
    ![](../media/lab1-11.png)
+
+1. On the **Deployment Configuration** page, select **Add a new forest (1)**, enter the root domain name using the provided value **(2)**, and then click **Next (3)**.
+
+   ```
+   Contoso.local
+   ```
+
+   ![](../media/sec-hybr-apr-ex1-g7.png) 
+
+1. On the **Domain Controller Options** page, keep the default settings, enter and confirm a password of your choice **(1)**, ensure you save this password for future use, and then click **Next (2)**.
+
+   ![](../media/sec-hybr-apr-ex1-g8.png)
+
+   > **Note:** Make sure to keep a note of this password as changing it later on is troublesome.
  
-1. At the first checkpoint “Deployment Configuration”, please select the **add a new forest** radio button and enter your root domain name as **Contoso.local**. Then click **next**.
+1. On the **DNS Options** page, ignore the warning message, leave the default settings unchanged, and then click **Next**.
 
-   ![](../media/lab1-12.png) 
+   ![](../media/sec-hybr-apr-ex1-g9.png)
 
-1. At the “Domain Controller Options” checkpoint, leave all the settings untouched and enter your password and confirm it. Make sure to keep a note of this password as changing it later on is troublesome.
+1. On the **Additional Options** page, keep the default NetBIOS name unchanged, and then click **Next**.
 
-   ![](../media/lab1-13.png)
- 
-1. On the DNS Options page, you’l see an error message stating that there’s no parent zone found and no delegation for your DNS server could be created. Ignore this message and click the **next** button, leaving all the settings at this checkpoint unchanged.
+   ![](../media/sec-hybr-apr-ex1-g10.png)
 
-   ![](../media/lab1-14.png)
+1. On the **Paths** page, leave the default paths unchanged, and then click **Next**.
 
-1. On the Additional Options page, enter your desired NetBIOS domain name in the given textbox. Click **Next**.
+   ![](../media/sec-hybr-apr-ex1-g11.png)
 
-   ![](../media/lab1-15.png)
+1. On the **Review Options** page, review the selected configuration, and then click **Next**.
 
-1. Three or more paths will be listed on your screen. Do not change these paths. You’re not required to keep a note of these paths either. Click **next**.
+   ![](../media/sec-hybr-apr-ex1-g12.png)
 
-   ![](../media/lab1-16.png)
+   > **Note:** Review the selected options carefully, use **Previous** to make any changes if required, and once satisfied, click **Next** on the **Review Options** page.
 
-1. Whatever options you’ve selected so far will listed on the configuration wizard at this checkpoint. Have a look at them and if needed, move to the previous checkpoints using the “previous” button and make the desired changes. Once you’re satisfied with the selected options, click **next** on the “Review Options”.
+1. On the **Prerequisites Check** page, at this stage verify whether all prerequisite checks are completed successfully, if not review the listed errors and return to the required checkpoint to fix them, and once successful, click **Install**.
 
-   ![](../media/lab1-17.png)
+   ![](../media/sec-hybr-apr-ex1-g13.png)
 
-1. Next, head to the “Prerequisites Check” checkpoint. At this stage you’ll see, if all the prerequisite checks were successfully completed. If not, then a list of errors will be displayed on the window. If there are any errors, you’ll need to go to the stated checkpoint and fix the errors. Once you’ve fixed all the errors, a green check mark with a success message will be displayed. Then click **Install** to begin the installation.
-
-   ![](../media/lab1-18.png)
-
-1. Congratulations! You have successfully set up Active Directory on your Windows Server. Next, your server machine will restart once the promotion is successfully completed. You will lose the access to the LabVM for a while until restarts completes.
+1. Congratulations! You have successfully set up Active Directory on your Windows Server, after the installation completes, the server will restart automatically, and you will temporarily lose access to the LabVM until the restart is finished.
 
 ## Task 2: Adding users or groups in your Domain Controller
 In this task, you will add user accounts to the domain controller in Active Directory Users and Computers. You will create new user accounts with specified names, usernames, and passwords. By adding users to the domain controller, you will ensure that they have access to resources within the domain and can authenticate against Active Directory.
