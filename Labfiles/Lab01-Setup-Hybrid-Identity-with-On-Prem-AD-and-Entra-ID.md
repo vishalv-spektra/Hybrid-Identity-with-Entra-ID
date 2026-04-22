@@ -151,78 +151,93 @@ In this task, you will add user accounts to the domain controller in Active Dire
 
    > **Note:** Repeat the same steps to create the remaining users using the provided details.
 
-## Task 3: Configure directory synchronization with Microsoft Entra Connect
-In this task, you will configure directory synchronization between your on-premises Active Directory and Microsoft Entra ID using Entra Connect. This involves downloading and installing Azure AD Connect, providing necessary credentials for synchronization, and configuring synchronization options. By completing this task, you will enable the seamless synchronization of user identities between on-premises AD and Entra ID.
+### Task 3: Configure directory synchronization with Microsoft Entra Connect
 
-1. On the taskbar, select **Microsoft Edge**.
+In this task, you will configure directory synchronization between your on-premises Active Directory and Azure Active Directory using Microsoft Entra Connect. This involves downloading and installing Microsoft Entra Connect, providing necessary credentials for synchronization, and configuring synchronization options. By completing this task, you will enable the seamless synchronization of user identities between on-premises AD and Microsoft Entra.
 
-1. In the address bar, enter the provided URL, and then press **Enter**.
+1. In your Lab VM, open the Microsoft Edge browser and navigate to the below link.
 
    ```
-   https://www.microsoft.com/en-us/download/details.aspx?id=47594
+   https://entra.microsoft.com/#view/Microsoft_AAD_Connect_Provisioning/AADConnectMenuBlade/%7E/GetStarted
    ```
 
-1. On the Microsoft Entra connect, select **Download**. 
+   >**Note:** Log in with the credentials provided in the **Environment** tab if you are not logged in already. 
 
-   ![](../media/hybrid1.png)
+1. You will be navigated to **Microsoft Entra Connect** page, click on **Manage** 
+
+   ![](../media/L1T3S3-0903.png)
+
+1. Scroll down and select **Download Connect Sync Agent** on the manage page. 
+
+   ![](../media/L1T3S4-0903.png)
+
+1. Click on **Accept terms & download**
+
+   ![](../media/L1T3S5-0903.png)
 
 1. Select **Open downloads folder** and then in the **Downloads** window, double-click **AzureADConnect.msi**.
 
-1. In the **Microsoft Azure Active Directory Connect** wizard, on the **Welcome to Azure AD Connect** page, select the **I agree to the license terms and privacy notice** check box, and then select **Continue**.
+   >**Note:** If you receive an error while downloading the file that states Smart screen prevented the download, please click on the three dots next to the file in the downloads bar and select **Keep**. 
 
-   ![](../media/lab1-25.png)
+1. In the **Microsoft Entra Connect Sync** wizard, on the **Welcome to Microsoft Entra Connect Sync** page, select the **I agree to the license terms and privacy notice (1)** check box, and then select **Continue (2)**.
+
+   ![](../media/lab1-25upd.png)
 
 1. On the **Express Settings** page, select **Use express settings**.
 
-   ![](../media/lab1-26.png)
+   ![](../media/L1T3S8-0903.png)
 
-1. On the **Connect to Azure AD** page, in the **USERNAME** and **PASSWORD** boxes, enter **<inject key="AzureAdUserEmail"></inject>**, and your provided password **<inject key="AzureAdUserPassword"></inject>**, and then select **Next**.
+1. On the **Connect to Microsoft Entra ID** page, in the **USERNAME** box, enter **<inject key="AzureAdUserEmail"></inject> (1)** and then select **Next (2)**.
 
-   ![](../media/lab1-27.png)
+   ![](../media/L1T3S9-0903.png)
 
-1. On the **Connect to Azure AD DS** page, in the **USERNAME** and **PASSWORD** boxes, enter **CONTOSO\azureuser**, and your provided password **<inject key="LabVM Admin Password"></inject>**, and then select **Next**.
+1. You will be navigated to a pop-up for signing in to a Microsoft Account. 
 
-   ![](../media/lab1-28.png)
+   - Enter UserName/Email: **<inject key="AzureAdUserEmail"></inject>**
 
-1. On the **Azure AD sign-in configuration** page, select **Continue without matching all UPN suffixes to verified domains** checkbox and then select **Next**.
+      ![](../media/signin1-0903.png)
 
-   ![](../media/lab1-29.png)
+   - Enter Temporary Access Pass: **<inject key="AzureAdUserPassword"></inject>**
+   
+      ![](../media/signin2-0903.png)
+
+1. On the **Connect to AD DS** page, in the **USERNAME** box, enter **CONTOSO\azureuser (1)**, and password as **<inject key="LabVM Admin Password"></inject> (2)**, and then select **Next (3)**.
+
+   ![](../media/lab1-28upd.png)
+
+1. On the **Microsoft Entra sign-in configuration** page, check the **Continue without matching all UPN suffixes to verified domains (1)** checkbox and then select **Next (2)**.
+
+   ![](../media/L1T3S12-0903.png)
 
 1. On the **Ready to configure** page, ensure that **Start the synchronization process when configuration completes** is selected, and then select **Install**.
 
-   ![](../media/lab1-30.png)
+   ![](../media/lab1-30upd.png)
 
 1. When configuration is complete, select **Exit**.  
 
-   ![](../media/lab1-31.png)
-      > Note: At this time, synchronization of objects from your local Active Directory Domain Services (AD DS) and Azure AD begins. You should wait approximately 3-4 minutes for this process to complete.
+   ![](../media/lab1-31upd.png)
+     
+   >**Note:** At this time, synchronization of objects from your local Active Directory Domain Services (AD DS) and Microsoft Entra  begins. You should wait approximately 10 minutes for this process to complete.
 
-1. Close all open windows.
+### Task 4: Verify synchronization in Microsoft Entra
 
-## Task 4: Verify synchronization in Entra ID
-In this task, you will verify the synchronization of identities in Azure Active Directory. You will access the Microsoft 365 admin center, navigate to the Identity section, and verify that user accounts synchronized from on-premises AD are visible in Entra ID. By confirming successful synchronization, you will ensure that users can access cloud-based resources using their on-premises credentials.
+In this task, you will verify the synchronization of identities in Microsoft Entra. You will access the Microsoft 365 admin center, navigate to the Identity section, and verify that user accounts synchronized from on-premises AD are visible in Microsoft Entra. By confirming successful synchronization, you will ensure that users can access cloud-based resources using their on-premises credentials.
 
-1. On the taskbar, select **Microsoft Edge**.
+1. Open a new tab in **Microsoft Edge** browser in your LabVM, and navigate to Microsoft 365 Admin Center using the following URL:
 
-1. In the address bar, enter **https://admin.microsoft.com**.
+   ```
+   https://admin.microsoft.com
+   ```
 
-1. At the Sign-in prompt, enter **<inject key="AzureAdUserEmail"></inject>** and then select **Next**.
+   >**Note:** If prompted to sign in, enter **<inject key="AzureAdUserEmail"></inject>** and click **Next**.
 
-1. At the Enter password page, enter the password for the Admin account as **<inject key="AzureAdUserPassword"></inject>** and then select **Sign in**. 
+   > At the password prompt, enter **<inject key="AzureAdUserPassword"></inject>** and click **Sign in**.
 
-1. At the Action required prompt, select **Ask later**.
+1. In the Navigation pane, under **Users (1)** select **Active users (2)**.
 
-1. At the Stay signed in prompt, select **No**. The Microsoft 365 admin center opens.
+   ![](../media/L1T4S3-0903.png)
 
-1. Select the **Navigation menu** and then select **Show all**.
-
-1. In the Navigation pane, under **Admin centers** select **Identity**. The Microsoft Entra admin center opens.
-
-1. In the Microsoft Entra admin center, in the navigation pane, select **Users** > **All users**. 
-
-   ![](../media/lab1-32.png)
-
-1. Close Microsoft Edge.
+1. On the **Active users** page, you should see the user accounts that you created in your on-premises Active Directory Domain Services (AD DS) environment. This confirms that synchronization between your on-premises AD and Microsoft Entra  was successful.
 
 <validation step="88f54cf4-f08e-43d1-ae62-4372fa096ded" />
 
