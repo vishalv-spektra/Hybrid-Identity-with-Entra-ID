@@ -39,6 +39,8 @@ In this task, you will configure password writeback using Microsoft Entra Connec
 
 1. On the **Domain and OU filtering** page, select **Next**.
 
+    ![](../media/sec-hybr-apr-ex1-g25.png)
+
 1. On the **Optional features** page, select **Password writeback (1)**, and then select **Next (2)**.
 
     ![](../media/lab2-5upd.png)
@@ -57,17 +59,21 @@ In this task, you will configure password writeback using Microsoft Entra Connec
     secedit /configure /cfg %windir%\inf\defltbase.inf /db defltbase.sdb /verbose
     ```
 
+    ![](../media/sec-hybr-apr-ex1-g26.png)
+
 1. Once updated, click on the **Start (1)** menu, select **Power (2)** button and then select **Restart (3)** to restart the LabVM.
 
     ![](../media/L2T1S12-0903.png)
 
      >**Note**: Wait for 2-3 minutes and then click on "Reconnect" to connect to the LabVM.
 
-1. To verify if the policy is updated, navigate to **Local security policy -> expand Security Settings -> Account Policies -> Password Policy**. The Minimum Password Age should be set to 0.
+1. Select the **Search (1)** bar, type **Local Security Policy**, and then select **Local Security Policy (2)**.
 
     ![](../media/lab2-9a.png)
 
-    ![](../media/lab2-9upd.png)
+1. In **Local Security Policy**, expand **Security Settings (1)**, select **Password Policy (2)**, and verify that **Minimum password age** is set to **0 days (3)**.
+
+    ![](../media/sec-hybr-apr-ex1-g27.png)
 
 ### Task 2: Enable self-service password reset
 
