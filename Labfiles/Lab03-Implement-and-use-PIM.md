@@ -14,7 +14,7 @@ In this lab, you will perform the following:
 
 ### Task 1: Assign Azure resource roles
 
-In this task, you will assign the Global Administrator role to the users from Microsft Entra portal. 
+In this task, you will assign the Global Administrator role to the users from the Microsoft Entra portal. 
 
 1. Open a browser tab and sign in to Microsoft Entra Admin Center using your lab credentials. 
 
@@ -82,7 +82,7 @@ In this task, you will update and remove an existing Entra role assignment as ne
 
     ![](../media/lab3-6.png)
 
-1. To make the eligible assignment to active for any user, select **Update** from the Action list.
+1. To make the eligible assignment active for any user, select **Update** from the Action list.
 
 1. Provide the below details in **Membership settings** and click on **Save (5)**
 
