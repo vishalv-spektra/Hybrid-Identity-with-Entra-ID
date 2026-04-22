@@ -17,13 +17,13 @@ In this lab, you will perform the following:
 
 In this task, you will create a Log Analytics workspace to store the log information and analyze the machines onboarded through Azure Arc.
 
-1. On your LabVM, open a new browser tab and log in to **Azure Portal**, using the below URL: 
+1. On your LabVM, open a new browser tab and log in to **Azure Portal**, using the URL below: 
 
    ```
    https://portal.azure.com
    ```
 
-   >**Note:** Use the ODL credentials to login to Azure portal.
+   >**Note:** Use the ODL credentials to log in to the Azure portal.
    > - Username : **<inject key="AzureAdUserEmail"></inject>**
    > - Password : **<inject key="AzureAdUserPassword"></inject>**
 
@@ -45,7 +45,7 @@ In this task, you will create a Log Analytics workspace to store the log informa
 
    ![](../media/sec-hybr-apr3-ex3-g3.png)
 
-1. Once the workspace validation has passed, select **Create**. Wait for the new workspace to be provisioned, this may take a few minutes.
+1. Once the workspace validation has passed, select **Create**. Wait for the new workspace to be provisioned; this may take a few minutes.
 
    ![](../media/sec-hybr-apr3-ex3-g4.png)
 
@@ -58,13 +58,13 @@ In this task, you will create a Log Analytics workspace to store the log informa
 
 ### Task 2: Add Diagnostic setting to collect audit and signin logs
 
-In this task, you will configure diagnostic settings on log analytics workspace to collect audit and sign-in logs.
+In this task, you will configure diagnostic settings on the log analytics workspace to collect audit and sign-in logs.
 
 1. In the search bar, enter **Microsoft Entra ID (1)**, and then select **Microsoft Entra ID (2)**.
 
    ![](../media/sec-hybr-apr3-ex3-g5.png)
 
-1. From the left navigation pane, select **Diagnostic settings** under Monitoring section.
+1. From the left navigation pane, select **Diagnostic settings** under the Monitoring section.
 
    ![](../media/L4T2S3-0903-2.png)
 
@@ -87,7 +87,7 @@ In this task, you will configure diagnostic settings on log analytics workspace 
     https://portal.azure.com/
     ```
 
-1. On the **Sign in** blade, you will see a login screen, in which enter the following email/username and password and then click on **Sign in**.  
+1. On the **Sign in** blade, you will see a login screen, in which you enter the following email/username and password and then click on **Sign in**.  
 
    * **Azure Username/Email**:  <inject key="AzureAdUserEmail"></inject> 
 
