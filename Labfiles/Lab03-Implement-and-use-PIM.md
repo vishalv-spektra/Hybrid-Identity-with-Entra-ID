@@ -12,7 +12,7 @@ In this lab, you will perform the following:
 - Task 1: Assign Azure resource roles
 - Task 2: Update or remove an existing Entra role assignment
 
-### Task 1 - Assign Azure resource roles
+### Task 1: Assign Azure resource roles
 
 In this task, you will assign the Global Administrator role to the users from Microsft Entra portal. 
 
@@ -41,48 +41,40 @@ In this task, you will assign the Global Administrator role to the users from Mi
 
     ![](../media/lab3-3.png)
 
-1. In the **Add assignments** page, select the **Select role** menu and then select **Global Administrator (1)**.
+1. In the **Add assignments** page, select **Global Administrator (1)** under **Select role**, select **No member selected (2)**, and then configure the following:
+   - In the **Select a member** pane, select the following users **(3)**:
+     
+     | Name           |
+     |----------------|
+     | Edmund Reeve   |
+     | Miranda Snider |
+     | Allan Deyoung  |
+     | Joni Sherman   |
+     
+   - Select **Select (4)**, and then choose **Next (5)**.
 
-1. Under **Select member(s),** select **No member selected**.
+        ![](../media/L3T1S8-0903.png)    
 
-1. In the Select members pane, select the following users **(3)** and then choose **Select (4)**.
+1. On the **Settings** tab, select **Eligible (1)** under **Assignment type**, and then configure the following:
+   - **Eligible** assignments require the member to perform actions such as MFA, justification, or approval to use the role.
+   - **Active** assignments grant the role without requiring any action.
+   - Uncheck **Permanently eligible (2)**.
+   - Specify the assignment duration by setting the **Assignment start and end date/time (3)**.
+   - Select **Assign (4)**.
 
-    | Name           | 
-      | -------------- | 
-      | Edmund Reeve   | 
-      | Miranda Snider | 
-      | Allan Deyoung  | 
-      | Joni Sherman   | 
-
-    ![](../media/L3T1S8-0903.png)    
-
-1. Select **Next (5)**.
-
-1. On the **Settings** tab, under **Assignment type**, select **Eligible (1)**.
-
-   - **Eligible** assignments require the member of the role to act to use the role. Actions might include performing a multi-factor authentication (MFA) check, providing a business justification, or requesting approval from designated approvers.
-
-   - **Active** assignments do not require the member to perform any action to use the role. Members assigned as active have the privileges always assigned to the role.
-
-1. **Uncheck (2)** the permanently eligible. Specify an assignment duration by changing the **start and end dates and times (3)**. 
-
-1. When finished, select **Assign (4)**.
-
-    ![](../media/L3T1S12-0903.png)
+        ![](../media/L3T1S12-0903.png)
 
 1. After the new role assignment is created, a status notification is displayed.
 
-### Task 2 - Update or remove an existing Entra role assignment
+### Task 2: Update or remove an existing Entra role assignment
 
 In this task, you will update and remove an existing Entra role assignment as needed. 
 
-1. Open **Microsoft Entra Privileged Identity Management** > **Microsoft Entra roles**.
+1. In the **Microsoft Entra admin center**, enter **Microsoft Entra Privileged Identity Management (1)** in the search bar, and then **select it (2)**.
 
-1. Under **Manage**, select **Assignments (1)**.
+    ![](../media/sec-hybr-apr3-ex3-g1.png)
 
-1. On the **Eligible assignments (2)** tab, in the Action column, review the available options.
-
-1. Select **Remove (3)** to remove any user from eligible assignments.
+1. Under **Manage**, select **Assignments (1)**, open the **Eligible assignments (2)** tab, review the available options in the **Action** column, and select **Remove (3)** to remove any user from eligible assignments.
 
     ![](../media/L3T2S4-0903.png)
 
