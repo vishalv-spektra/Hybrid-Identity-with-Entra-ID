@@ -14,7 +14,7 @@ In this lab, you will perform the following:
   - Task 2: Configure access review
   - Task 3: Review access to groups and applications in access reviews
 - Exercise 2: Configure external collaboration settings
-  - Task 1: Enable Guest Users to perform self service sign-up
+  - Task 1: Enable Guest Users to perform self-service sign-up
   - Task 2: Configure external collaboration settings
 
 ## Exercise 1: Configure Access reviews
@@ -115,7 +115,7 @@ In this task, you will configure an access review in Microsoft Entra ID to revie
 
 In this task, you will review and manage user access to groups and applications through access reviews in the My Access portal. You will either manually assess and decide on user access or accept system-generated recommendations for managing permissions efficiently.
 
-1. Open a new InPrivate window in Microsoft Edge and navigate to My Access using the below URL: 
+1. Open a new InPrivate window in Microsoft Edge and navigate to My Access using the URL below: 
 
    ```
    https://myaccess.microsoft.com/
@@ -168,13 +168,13 @@ In this task, you will review and manage user access to groups and applications 
 
     -  Click on **Details** next to the access review.
      
-    - To make access reviews easier and faster for you, Azure provides recommendations that you can accept with a single selection. There are two ways that the system generates recommendations for the reviewer. One method is by the user's sign-in activity. If a user has been inactive for 30 days or more, the system recommends that the reviewer deny access.
+    - To make access reviews easier and faster for you, Azure provides recommendations that you can accept with a single selection. There are two ways that the system generates recommendations for the reviewer. One method is based on the user's sign-in activity. If a user has been inactive for 30 days or more, the system recommends that the reviewer deny access.
 
     - The other method is based on the access that the user's peers have. If the user doesn't have the same access as their peers, the system recommends that the reviewer deny that user access.
 
     - If you have No sign-in within 30 days or Peer outlier enabled, follow these steps to accept recommendations:
 
-    - Select one or more users, and then select Accept recommendations Or to accept recommendations for all unreviewed users, make sure that no users are selected and then select the Accept recommendations button on the top bar.
+    - Select one or more users, and then select Accept recommendations. To accept recommendations for all unreviewed users, make sure that no users are selected and then select the Accept recommendations button on the top bar.
 
     - Select Submit to accept the recommendations.
 
@@ -182,11 +182,11 @@ In this task, you will review and manage user access to groups and applications 
 
 ## Exercise 2: Configure external collaboration settings
 
-### Task 1 - Enable Guest Users to perform self service sign-up
+### Task 1 - Enable Guest Users to perform self-service sign-up
 
 In this task, you will configure settings to allow guest users to sign up for access on their own in Microsoft Entra by enabling the self-service sign-up feature.
 
-1. Open a browser tab to sign in to the Microsoft Entra Admin Center using the below URL:
+1. Open a browser tab to sign in to the Microsoft Entra Admin Center using the URL below:
 
    ```
    https://entra.microsoft.com
