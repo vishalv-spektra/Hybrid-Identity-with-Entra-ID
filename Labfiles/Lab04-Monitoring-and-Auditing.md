@@ -60,9 +60,9 @@ In this task, you will create a Log Analytics workspace to store the log informa
 
 In this task, you will configure diagnostic settings on log analytics workspace to collect audit and sign-in logs.
 
-1. Once the workspace is created, Search for **Entra ID** and select on **Microsoft Entra ID**.
+1. In the search bar, enter **Microsoft Entra ID (1)**, and then select **Microsoft Entra ID (2)**.
 
-   ![](../media/L4T2S3-0903-1.png)
+   ![](../media/sec-hybr-apr3-ex3-g5.png)
 
 1. From the left navigation pane, select **Diagnostic settings** under Monitoring section.
 
@@ -99,8 +99,6 @@ In this task, you will configure diagnostic settings on log analytics workspace 
   
 1. If you see the pop-up **Stay Signed in?** click **No**.
 
-    ![](../media/g3.jpg)
-
 1. Once it is logged into Azure portal successfully, close the InPrivate window.
 
    >**Note**: Wait for about 15 mins for logs ingestion to happen and proceed with the next task.
@@ -113,21 +111,33 @@ In this task, you will verify the logs collected in the Log Analytics workspace.
 
    ![](../media/L4T1S2-0903.png)
 
-1. Select **Logs (1)** option in the left pane and close all the pop-ups until the query pane is visible.
+1. On the **Log Analytics workspaces** page, select **log-analytics<inject key="DeploymentID" enableCopy="false"/>**.
 
-1. Select the mode as **KQL mode (2)**, and in the query pane, run the below queries, to view the activity data ingested into the workspace.
+   ![](../media/sec-hybr-apr3-ex3-g6.png)
 
-      ```
-       AuditLogs
-      ```
+1. In the **Log Analytics workspace**, select **Logs (1)**, and then close any pop-up by selecting **Cancel (2)**.
+
+   ![](../media/sec-hybr-apr3-ex3-g7.png)
+
+1. In the **Logs** pane, select the dropdown next to **Simple mode (1)**, and then select **KQL mode (2)**.
+
+   ![](../media/sec-hybr-apr3-ex3-g8.png)
+
+1. In the query editor, enter the following query **AuditLogs (1)**, and then select **Run (2)**:
+
+   ```
+      AuditLogs
+   ```
       
-      ![](../media/L4T3S3-0903.png)
+   ![](../media/sec-hybr-apr3-ex3-g9.png)
 
-      ```
-       SignInLogs
-      ```
-    
-      ![](../media/lab4-6.png)
+   ```
+   SigninLogs
+   ```
+   
+   ![](../media/lab4-6.png)
+
+   > **Note:** It may take 15–20 minutes for logs to appear in the workspace after ingestion.
 
 ## Summary
 
