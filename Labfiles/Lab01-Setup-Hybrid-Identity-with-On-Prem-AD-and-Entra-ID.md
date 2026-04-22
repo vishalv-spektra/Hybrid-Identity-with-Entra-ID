@@ -175,7 +175,9 @@ In this task, you will configure directory synchronization between your on-premi
 
    ![](../media/L1T3S5-0903.png)
 
-1. Select **Open downloads folder** and then in the **Downloads** window, double-click **AzureADConnect.msi**.
+1. Select **Downloads (1)**, and then double-click the downloaded setup file **(2)**.
+
+   ![](../media/sec-hybr-apr-ex1-g21.png)
 
    >**Note:** If you receive an error while downloading the file that states Smart screen prevented the download, please click on the three dots next to the file in the downloads bar and select **Keep**. 
 
@@ -239,7 +241,7 @@ In this task, you will verify the synchronization of identities in Microsoft Ent
 
 1. On the **Active users** page, you should see the user accounts that you created in your on-premises Active Directory Domain Services (AD DS) environment. This confirms that synchronization between your on-premises AD and Microsoft Entra  was successful.
 
-<validation step="88f54cf4-f08e-43d1-ae62-4372fa096ded" />
+<validation step="ecb2747e-8d27-4fbc-9459-a9bb4a6d5171" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Click the Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
