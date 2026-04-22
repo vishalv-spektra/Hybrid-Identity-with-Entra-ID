@@ -12,7 +12,7 @@ In this lab scenario, you are tasked with setting up a hybrid identity solution 
 In this lab, you will perform the following:
 
 - Task 1: Active Directory Setup
-- Task 2: Adding users or groups in your Domain Controller
+- Task 2: Adding users or groups to your Domain Controller
 - Task 3: Configure directory synchronization with Entra ID Connect
 - Task 4: Verify synchronization in Entra ID
 
@@ -65,13 +65,12 @@ In this task, you will set up Active Directory Domain Services on a Windows Serv
 
    > **Note:** If you need to make changes, click **Previous** to go back and update the settings, and once confirmed, click **Install** on the **Confirmation** page.
   
-1. The wizard will then begin installation. The time of install depends on your machine’s hardware configuration and what features you’ve selected to be installed. Please make sure not to interrupt the installation. Once the installation is complete, click the **Close** button.
+1. The wizard will then begin installation. The time of installation depends on your machine’s hardware configuration and what features you’ve selected to be installed. Please make sure not to interrupt the installation. Once the installation is complete, click the **Close** button.
 
-  
-1. Relaunch **Server Manager** if you have already closed it. On your Server Manager dashboard, you’ll should see a yellow triangle warning sign on the top right of the window near the menu bar. This sign appears only if Active Directory Domain Services was properly installed.
+1. Relaunch **Server Manager** if you have already closed it. On your Server Manager dashboard, you should see a yellow triangle warning sign on the top right of the window near the menu bar. This sign appears only if Active Directory Domain Services was properly installed.
 
    ![](../media/lab1-10.png)    
-1. Click on the warning sign and a dropdown list will show you the required actions termed **post-deployment configuration**.
+1. Click on the warning sign, and a dropdown list will show you the required actions termed **post-deployment configuration**.
    
 1. Look for the **Promote this server to a domain controller** option and click on it.
 
@@ -109,11 +108,11 @@ In this task, you will set up Active Directory Domain Services on a Windows Serv
 
    > **Note:** Review the selected options carefully, use **Previous** to make any changes if required, and once satisfied, click **Next** on the **Review Options** page.
 
-1. On the **Prerequisites Check** page, at this stage verify whether all prerequisite checks are completed successfully, if not review the listed errors and return to the required checkpoint to fix them, and once successful, click **Install**.
+1. On the **Prerequisites Check** page, at this stage, verify whether all prerequisite checks are completed successfully, if not review the listed errors and return to the required checkpoint to fix them, and once successful, click **Install**.
 
    ![](../media/sec-hybr-apr-ex1-g13.png)
 
-1. Congratulations! You have successfully set up Active Directory on your Windows Server, after the installation completes, the server will restart automatically, and you will temporarily lose access to the LabVM until the restart is finished.
+1. Congratulations! You have successfully set up Active Directory on your Windows Server. After the installation completes, the server will restart automatically, and you will temporarily lose access to the LabVM until the restart is finished.
 
 ## Task 2: Adding users or groups in your Domain Controller
 In this task, you will add user accounts to the domain controller in Active Directory Users and Computers. You will create new user accounts with specified names, usernames, and passwords. By adding users to the domain controller, you will ensure that they have access to resources within the domain and can authenticate against Active Directory.
@@ -155,7 +154,7 @@ In this task, you will add user accounts to the domain controller in Active Dire
 
 In this task, you will configure directory synchronization between your on-premises Active Directory and Azure Active Directory using Microsoft Entra Connect. This involves downloading and installing Microsoft Entra Connect, providing necessary credentials for synchronization, and configuring synchronization options. By completing this task, you will enable the seamless synchronization of user identities between on-premises AD and Microsoft Entra.
 
-1. In your Lab VM, open the Microsoft Edge browser and navigate to the below link.
+1. In your Lab VM, open the Microsoft Edge browser and navigate to the link below.
 
    ```
    https://entra.microsoft.com/#view/Microsoft_AAD_Connect_Provisioning/AADConnectMenuBlade/%7E/GetStarted
@@ -225,7 +224,7 @@ In this task, you will configure directory synchronization between your on-premi
 
 In this task, you will verify the synchronization of identities in Microsoft Entra. You will access the Microsoft 365 admin center, navigate to the Identity section, and verify that user accounts synchronized from on-premises AD are visible in Microsoft Entra. By confirming successful synchronization, you will ensure that users can access cloud-based resources using their on-premises credentials.
 
-1. Open a new tab in **Microsoft Edge** browser in your LabVM, and navigate to Microsoft 365 Admin Center using the following URL:
+1. Open a new tab in the **Microsoft Edge** browser in your LabVM, and navigate to Microsoft 365 Admin Center using the following URL:
 
    ```
    https://admin.microsoft.com
