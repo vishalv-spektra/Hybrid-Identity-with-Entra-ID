@@ -118,33 +118,36 @@ In this task, you will set up Active Directory Domain Services on a Windows Serv
 ## Task 2: Adding users or groups in your Domain Controller
 In this task, you will add user accounts to the domain controller in Active Directory Users and Computers. You will create new user accounts with specified names, usernames, and passwords. By adding users to the domain controller, you will ensure that they have access to resources within the domain and can authenticate against Active Directory.
 
-1. Go to Start > Windows Administrative Tools > Active Directory Users and Computers.
+1. Select the **Start (1)** icon, open **Windows Administrative Tools (2)**, and then select **Active Directory Users and Computers (3)**.
 
    ![](../media/lab1-19.png)
 
-1. In a new Desktone hosted Domain controller, Expand the folder which represents the domain and expand and select the **Users** folder then Click **user icon**.
+1. In **Active Directory Users and Computers**, expand **Contoso.local (1)**, select the **Users (2)** folder, and then click the **User icon (3)**.
 
-   ![](../media/lab1-20.png)
+   ![](../media/sec-hybr-apr-ex1-g14.png)
 
-1. To create a new user, Click **user icon** and create the users with the following info and click on **Next**.
+1. The **New Object - User** window will open, allowing you to enter the user details.
 
-      | First name           | User logon name          | Password   | 
-      | ---------------------| ------------------------ | ---------- |
-      | Edmund Reeve         | `ereeve@Contoso.local`   | Pa55-w.rd! |
-      | Miranda Snider       | `msnider@Contoso.local`  | Pa55-w.rd! | 
-      | Allan Deyoung        | `AllanD@Contoso.local`   | Pa55-w.rd! | 
-      | Joni Sherman         | `JoniS@Contoso.local`    | Pa55-w.rd! | 
+   ![](../media/sec-hybr-apr-ex1-g15.png)
 
+1. In the **New Object - User** window, enter the user details such as **First name (1)** and **User logon name (2)** using the provided values, and then click **Next (3)**.
 
-    ![](../media/lab1-21.png)
+   | First name           | User logon name     | Password   | 
+   | ---------------------| ------------------- | ---------- |
+   | Edmund Reeve         | `ereeve`            | Pa55-w.rd! |
+   | Miranda Snider       | `msnider`           | Pa55-w.rd! | 
+   | Allan Deyoung        | `AllanD`            | Pa55-w.rd! | 
+   | Joni Sherman         | `JoniS`             | Pa55-w.rd! | 
+
+   ![](../media/sec-hybr-apr-ex1-g16.png)
       
-1. Please find the below images indicating the user creation process. Make sure to uncheck the **User must change the Password at next logon** setting. Repeat these steps to create all users.
+1. In the **New Object - User** window, enter and confirm the password **(1)**, uncheck **User must change password at next logon (2)**, and then click **Next (3)**.
     
-    ![](../media/lab2-nn.png)
+    ![](../media/sec-hybr-apr-ex1-g17.png)
 
-1. Click on Finish.
+1. On the final page, review the user details, and then click **Finish**.
    
-    ![](../media/lab1-23.png)
+    ![](../media/sec-hybr-apr-ex1-g19.png)
 
 ## Task 3: Configure directory synchronization with Microsoft Entra Connect
 In this task, you will configure directory synchronization between your on-premises Active Directory and Microsoft Entra ID using Entra Connect. This involves downloading and installing Azure AD Connect, providing necessary credentials for synchronization, and configuring synchronization options. By completing this task, you will enable the seamless synchronization of user identities between on-premises AD and Entra ID.
