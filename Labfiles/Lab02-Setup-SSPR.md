@@ -1,104 +1,183 @@
-# Lab 2: Configuring Self-service password reset for user accounts in Entra ID
+# Lab 02: Configuring Self-service password reset for user accounts in Entra ID
 
-## Lab Overview 
+#### Estimated Duration: 60 Minutes
 
-This lab focuses on enabling self-service password reset with authentication methods via Microsoft Entra Admin Center, and validating by changing a password via the My Account page in Microsoft Edge.
+## Overview 
 
-## Lab Scenario
+This lab focuses on configuring Entra Connect with password writeback, updating the minimum password age policy to 0, enabling self-service password reset with authentication methods via Microsoft Entra Admin Center, and validating by changing a password via the My Account page in Microsoft Edge.
 
-In this lab scenario, you are tasked with setting up self-service password reset in Entra ID, employees can securely reset their passwords without IT intervention, improving productivity and enhancing security and user experience.
-
-## Lab objectives
+## Objectives
 
 In this lab, you will perform the following:
+- Task 1: Configure password writeback and Password minimum age policy. 
+- Task 2: Enable self-service password reset
+- Task 3: Validate self-service password reset
 
-- Task 1: Enable self-service password reset
-- Task 2: Validate self-service password reset
+### Task 1: Configure password writeback and Password minimum age policy. 
 
-## Estimated timing: 40 mins
+In this task, you will configure password writeback using Microsoft Entra Connect.
 
-## Architecture Diagram
+1. Select the **Azure AD Connect (1)** application from the LabVM desktop
 
-  ![Lab overview.](../media/hybl2.png)
+1. On the **Welcome to Entra Connect Sync** page, select **Configure (2)**.
 
-### Task 1: Enable self-service password reset
+   ![](../media/lab2-1upd.png)
 
-In this task, you'll enable self-service password reset (SSPR) for all users in Microsoft Entra ID. You'll configure the necessary authentication methods, including mobile phone, email, and security questions, allowing users to reset their passwords independently. 
+1. On the **Additional tasks** page, select **Customize synchronization options (1)**, and then select **Next (2)**.
 
-1. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com/**, and then press **Enter**.
+   ![](../media/lab2-2upd.png)
 
-2. Sign in as  **<inject key="AzureAdUserEmail"></inject>**, and use the tenant Admin password **<inject key="AzureAdUserPassword"></inject>**, If the **Stay signed in?** prompt appears, select **No**.  
+1. On the **Connect to Microsoft Entra ID** page, type **<inject key="AzureAdUserEmail"></inject> (1)** in the **USERNAME** text box and then select **Next (2)**.
 
-   > The Microsoft Entra admin center opens.
+   ![](../media/L2T1S4-0903.png)
 
-3. In the Microsoft Entra admin center, Navigate to the Search Resources section of the site.
+1. Select the **<inject key="AzureAdUserEmail"></inject>** as the username and enter the Temporary Access Pass  **<inject key="AzureAdUserPassword"></inject>** for the password, and then select **Sign in**.
 
-4. In the search box, type **password reset** and then select **Password reset**.
+1. On the **Connect to your directories** page, select **Next**.
 
-    ![](../media/hybrid2.png)
+   ![](../media/lab2-4upd.png)
 
-5. In the **Password reset | Properties** window, select **All** to enable self-service password reset to all users. Select **Save**.
-  
-    ![](../media/hybrid3.png)
+1. On the **Domain and OU filtering** page, select **Next**.
 
-6. On the **Password reset | Properties** blade, select **Authentication methods** under **Manage** section.
+    ![](../media/sec-hybr-apr-ex1-g25.png)
 
-7. For the methods available to users, ensure that **Mobile Phone** and **Email** are selected, and then select **Security Questions**.
+1. On the **Optional features** page, select **Password writeback (1)**, and then select **Next (2)**.
 
-8. For the **Number of questions required to register**, select **3**.
+    ![](../media/lab2-5upd.png)
 
-9. For the **Number of questions required to reset**, select **3**.
+1. On the **Ready to configure** page, select **Configure**.
 
-10. In the **Select security questions** section, select **No security questions configured**, then select **+ Predefined**. Select three questions of your choice, and then select **Ok**.
+    ![](../media/lab2-6upd.png)
 
-11. Select **Save**.
+1. On the **Configuration complete** page, select **Exit**.
 
-12. Select **Registration** Select **No** for **Require users to register when signing in**, and the select **Save**.
-    
-    ![](../media/hybrid4.png)
- 
-13. Close Microsoft Edge.
+    ![](../media/lab2-7upd.png)
 
-### Task 2: Validate self-service password reset
+1. Open **Command prompt** in your LabVM and run the below command to update the minimum password age policy to 0.
 
-In this task, you'll validate the self-service password reset (SSPR) feature by signing in with a specific user account and changing the password. You'll confirm that users can securely reset their passwords using the SSPR setup, ensuring the feature is functioning as intended.
+    ```
+    secedit /configure /cfg %windir%\inf\defltbase.inf /db defltbase.sdb /verbose
+    ```
 
-1. On the taskbar, select **Microsoft Edge**.
+    ![](../media/sec-hybr-apr-ex1-g26.png)
 
-2. Browse to **https://myaccount.microsoft.com**. 
+1. Once updated, click on the **Start (1)** menu, select **Power (2)** button and then select **Restart (3)** to restart the LabVM.
 
-3. On the **Pick an account** page, select **Use another account**.
+    ![](../media/L2T1S12-0903.png)
 
-4. On the **Sign in** page, enter **`msnider@xxxxxxx.onmicrosoft.com`** and then select **Next**.
+     >**Note**: Wait for 2-3 minutes and then click on "Reconnect" to connect to the LabVM.
 
-  >**Note**: Replace xxxx with the tenantname provided.
-  
-5. On the **Enter password** page, enter **<inject key="AzureAdUserPassword"></inject>** or the password that you have entered and then select **Sign in**. If the Microsoft Edge prompts to save the password, select **Save**.
+1. Select the **Search (1)** bar, type **Local Security Policy**, and then select **Local Security Policy (2)**.
 
-6. When **Action required** window prompted click on **Ask later**.
-   
-7. On the **My Account** page, in the navigation pane, select **Password**.
+    ![](../media/lab2-9a.png)
 
-    ![](../media/lab2-8.png)
+1. In **Local Security Policy**, expand **Security Settings (1)**, select **Password Policy (2)**, and verify that **Minimum password age** is set to **0 days (3)**.
 
-8. On the **Change password** page, enter the following information and then select **submit**:
-     - Current password: **<inject key="AzureAdUserPassword"></inject>**
-     - Create new password: **Pa55w.rd!1234**
-     - Confirm new password: **Pa55w.rd!1234**
+    ![](../media/sec-hybr-apr-ex1-g27.png)
 
-9. If Microsoft Edge prompts to save the password, select **Sumit** > **Done**.
+### Task 2: Enable self-service password reset
 
-10. Close Microsoft Edge.
+In this task, you will enable self-service password reset for users in your tenant via Microsoft Entra Admin Center.
 
-**Results**: After completing this exercise, you will have successfully configured and validated self-service password reset.
+1. Open the **Microsoft Edge** browser in your LabVM, and navigate to Microsoft Entra Admin Center using the following URL:
 
-## Summary 
-In this lab, you will learn how to configure and validate self-service password reset (SSPR) for user accounts in Microsoft Entra ID. By enabling SSPR, users can securely reset their own passwords without needing IT support, which enhances productivity and security.
+    ``` 
+    https://entra.microsoft.com/
+    ```
 
-## Review
-In this lab, you have completed:
+1. If prompted, sign in as  **<inject key="AzureAdUserEmail"></inject>**, and use the Temporary Access Pass as **<inject key="AzureAdUserPassword"></inject>**, If the **Stay signed in?** prompt appears, select **No**.  
 
-- Enable self-service password reset
-- Validate self-service password reset
+1. On the **Microsoft Entra admin center**, in the search box, type **password reset (1)**, and then select **Password reset (2)**.
 
-## You have successfully completed this lab.
+    ![](../media/L2T2S4-0903.png)
+
+1. In the **Password reset | Properties** window, select **All (1)** to enable self-service password reset to all users. Select **Save (2)**.
+
+    ![](../media/lab2-t2.png)
+
+1. On the **Password reset | Properties** blade, select **Authentication methods (1)**, and then configure the following:
+   - Ensure **Mobile app code, Email, and Mobile phone (2)** are selected.
+   - Select **Security questions (3)**.
+   - Set **3** for **Number of questions required to register (4)**.
+   - Set **3** for **Number of questions required to reset (5)**.
+   - Click on **security questions configured (6)**.
+
+        ![](../media/sec-hybr-apr2-ex2-g9.png)
+
+1. In the Select security questions, select **Predefined (1)**. Select three questions **(2)** of your choice, and then select **Ok (3)**.
+
+    ![](../media/L2T2S10.1-0903.png)
+
+    ![](../media/L2T2S10.2-0903.png)
+
+1. Select **Ok**. and click on **Save** to save the settings.
+
+1. Then select **Registration (1)** in the left pane, select **No (2)** for **Require users to register when signing in**, and the select **Save (3)**.
+
+    ![](../media/L2T2S12-0903.png)
+
+1. In the left navigation pane, select **On-premises integration (1)**.
+
+1. Verify that your on-premises writeback client is running and select the checkbox for **Write back passwords with Microsoft Entra Connect cloud sync (2)** and then click **Save (3)**.
+
+    ![](../media/L2T2S14-0903.png)
+
+### Task 3: Validate self-service password reset
+
+In this task, you will validate self-service password reset by changing the password via the My Account page.
+
+1. Open a New InPrivate window in Microsoft Edge and navigate to the My Account page using the following URL:
+
+    ```
+    https://myaccount.microsoft.com/
+    ```
+
+1. On the **Sign in** page, enter **`msnider@xxxxxx.onmicrosoft.com` (1)** and then select **Next (2)**.
+
+    >**Note**: Replace xxxx with the tenant name provided in the lab credentials.
+
+    ![](../media/L2T3S2-0903.png)
+
+1. On the **Enter password** page, enter **Pa55-w.rd!** or the password that you have entered and then select **Sign in**. 
+
+    > **Note**: If prompted with MFA, please follow the steps below or skip the steps and continue from step 13 if MFA is already enabled.
+
+1. At the **Let's keep your account secure** prompt, select **Next** thrice
+
+1. **Note:** If you don’t have the Microsoft Authenticator app installed on your mobile device:
+
+    - Open **Google Play Store** (Android) or **App Store** (iOS).
+    - Search for **Microsoft Authenticator** and tap **Install**.
+    - Open the **Microsoft Authenticator** app, select **Add account**, then choose **Work or school account**.
+
+1. A **QR code** will be displayed on your computer screen.
+
+1. In the Authenticator app, select **Scan a QR code** and scan the code displayed on your screen.
+
+1. After scanning, click **Next** to proceed.
+
+1. On your phone, enter the number shown on your computer screen in the Authenticator app and select **Next** and then click on **Done**,
+       
+1. If prompted to stay signed in, you can click **No**.
+
+1. On the **My Account** page, in the navigation pane, select **Change password**.
+
+    ![](../media/L2T3S4-0903.png)
+
+1. On the **Change your password** page, enter the following information and then select **Submit (3)**:
+
+     - New password: **Pa55w.rd!1234 (1)**
+     - Confirm new password: **Pa55w.rd!1234 (2)**
+
+        ![](../media/L2T3S5-0903-1.png)
+
+1. On the Success, password changed window, click on **Done**.
+
+1. Once done, close the InPrivate window. 
+
+## Summary
+
+In this lab, you have configured self-service password reset for user accounts in Entra ID. You enabled password writeback using Microsoft Entra Connect, updated the minimum password age policy to allow immediate password changes, and configured self-service password reset options, including authentication methods and registration requirements. Finally, you validated the self-service password reset process by successfully changing a user's password through the My Account page. This setup empowers users to manage their passwords securely and reduces the administrative overhead of password resets.
+
+#### You have successfully completed the lab. Click on Next >> to proceed with the next lab.
+   ![](../media/up4.png)
