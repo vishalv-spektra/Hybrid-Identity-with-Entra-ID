@@ -27,7 +27,7 @@ In this task, you will assign the Global Administrator role to the users from Mi
 
 2. Search **(1)** for and then select **Microsoft Entra Privileged Identity Management (2)**.
 
-    ![](../media/L3T1S2.1-0903.png)
+    ![](../media/L3T1S2.1-0903-1.png)
 
 3. In the Privileged Identity Management page, in the left navigation, select **Microsoft Entra roles.**
 

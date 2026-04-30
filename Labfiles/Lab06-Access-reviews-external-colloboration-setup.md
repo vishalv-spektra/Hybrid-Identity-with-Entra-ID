@@ -44,9 +44,9 @@ In this task, you will create a Microsoft 365 group named **All Users** in the A
    | Group description | **Similar access group (3)** |
    | Microsoft Entra roles can be assigned to the group | **Yes (4)** |
    | Owners | Click on **no owners selected** and select **ODL_User <inject key="DeploymentID" enableCopy="false"/>** (**5)** from the list |
-   | Members | Click on **no members selected** and select **Allan**, **Joni**, **Mirinda**, **Edmund** and also include **ODL_User <inject key="DeploymentID" enableCopy="false"/>** **(6)** from the list |
+   | Members | Click on **no members selected** and select **Allan**, **Joni**, **Miranda**, **Edmund** and also include **ODL_User <inject key="DeploymentID" enableCopy="false"/>** **(6)** from the list |
 
-      ![](../media/L5E1T1S4-0903.png)
+      ![](../media/L5E1T1S4-0903-1.png)
 
 1. Click on **Create (7)** and select **Yes**
    
@@ -215,7 +215,7 @@ In this task, you will configure external collaboration settings by enabling ema
 
 1. Select the **Email one-time passcode (3)** configured link.
 
-   ![](../media/L5E2T2S1-0903.png)
+   ![](../media/L5E2T2S1-0903-1.png)
 
    >**Note:** A one-time passcode is a very secure way to invite a user to join your organization.
 

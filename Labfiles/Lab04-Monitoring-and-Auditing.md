@@ -43,7 +43,7 @@ In this task, you will create a Log Analytics workspace to store the log informa
 
 1. Once the workspace validation has passed, select **Create**. Wait for the new workspace to be provisioned, this may take a few minutes.
 
-   ![](../media/lab4-2.png)
+   ![](../media/lab4-2-1.png)
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps
     > - Scroll down in the lab guide and hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -95,7 +95,7 @@ In this task, you will configure diagnostic settings on log analytics workspace 
   
 1. If you see the pop-up **Stay Signed in?** click **No**.
 
-    ![](../media/g3.jpg)
+    ![](../media/g3-1.png)
 
 1. Once it is logged into Azure portal successfully, close the InPrivate window.
 
@@ -120,7 +120,7 @@ In this task, you will verify the logs collected in the Log Analytics workspace.
       ![](../media/L4T3S3-0903.png)
 
       ```
-       SignInLogs
+       SigninLogs
       ```
     
       ![](../media/lab4-6.png)
