@@ -184,4 +184,4 @@ In this task, you will validate self-service password reset by changing the pass
 In this lab, you have configured self-service password reset for user accounts in Entra ID. You enabled password writeback using Microsoft Entra Connect, updated the minimum password age policy to allow immediate password changes, and configured self-service password reset options, including authentication methods and registration requirements. Finally, you validated the self-service password reset process by successfully changing a user's password through the My Account page. This setup empowers users to manage their passwords securely and reduces the administrative overhead of password resets.
 
 #### You have successfully completed the lab. Click on Next >> to proceed with the next lab.
-   ![](../media/up4.png)
+   ![](../media/up4-1.png)

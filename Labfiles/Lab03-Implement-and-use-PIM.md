@@ -107,4 +107,4 @@ In this lab, you have successfully assigned Azure resource roles with Privileged
 
 #### You have successfully completed the lab. Click on Next >> to proceed with the next lab.
 
-   ![](../media/up4.png)
+   ![](../media/up4-1.png)
