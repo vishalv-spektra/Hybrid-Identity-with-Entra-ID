@@ -69,11 +69,11 @@ In this task, you will configure an access review in Microsoft Entra ID to revie
 
    ![](../media/L5E1T2S2-0903.png)
 
-1. On the **Choose an Access Review Template**, select **Review access to a resource type**
+1. On the **Create an access review** page, select **Review access to a resource type**
 
    ![](../media/L5E1T2S3-0903.png)
 
-1. On **New access review** page, provide the below settings and Select **Next:Reviews (7)**.
+1. On **New access review** page, provide the below settings and Select **Next: Reviews (7)**.
 
    - Select what to review: **Teams + Groups (1)**
    - Review scope: **Select Teams + Groups (2)**
@@ -85,7 +85,7 @@ In this task, you will configure an access review in Microsoft Entra ID to revie
 
       ![](../media/L5E1T2S4.2-0903.png)
 
-1. On **Reviews** tab enter the following and click on select **Next: Settings (4)**
+1. On **Reviews** tab, enter the following and click on select **Next: Settings (4)**
 
    - Select reviewers: **Selected user(s) or group(s) (1)**
    - Users or Groups: Click **+ Select Reviewers** and select **ODL_User <inject key="DeploymentID" enableCopy="false"/> (2)** from the list.
@@ -101,7 +101,7 @@ In this task, you will configure an access review in Microsoft Entra ID to revie
 
       ![](../media/new1-5-4.png)
 
-1.  On the **Review + Create** tab enter **AccessreviewforAllusers** to the **Review name** and click **Create**.
+1.  On the **Review + Create** tab enter **AccessreviewforAllusers (1)** to the **Review name (2)** and click **Create**.
 
      ![](../media/new1-5-5.png)
 
@@ -130,11 +130,11 @@ In this task, you will review and manage user access to groups and applications 
 
    ![](../media/L5E1T3S2-0903.png)
 
-1. After you open My Access under Groups and Apps, you can see:
+1. After you open **Access reviews**, under **Group and app membership**, you can see:
 
       * **Name**: The name of the access review.
       * **Due**: The due date for the review. After this date, denied users could be removed from the group or app being reviewed.
-      * **Resource**: The name of the resource under review.
+      * **Resource Type**: The name of the resource under review.
       * **Progress**: The number of users reviewed over the total number of users part of this access review.
 
 1. Select the name of the  access review that you created to get started.
@@ -203,7 +203,7 @@ In this task, you will configure settings to allow guest users to sign up for ac
    
     ![](../media/L5E2T1S4-0903.png)
 
-1. Select **Yes (1)** for the setting Enable guest self-service sign up via user flows and then click on **Save (2)** at the top of the screen.
+1. Ensure that **Yes (1)** is selected. If not, select **Yes (1)** for the setting Enable guest self-service sign up via user flows and then click on **Save (2)** at the top of the screen.
 
     ![](../media/L5E2T1S5-0903.png)
 
@@ -227,9 +227,9 @@ In this task, you will configure external collaboration settings by enabling ema
 
    >**NOTE:**
 
-      - Guest users have the same access as members (most inclusive): This option gives guests the same access to Microsoft Entra resources and directory data as member users.
-      - Guest users have limited access to properties and memberships of directory objects: (Default) This setting blocks guests from certain directory tasks, like enumerating users, groups, or other directory resources. Guests can see membership of all non-hidden groups.
-      - Guest user access is restricted to properties and memberships of their own directory objects (most restrictive): With this setting, guests can access only their own profiles. Guests are not allowed to see other users’ profiles, groups, or group memberships.Screen image displaying guest user access restriction options
+      - **Guest users have the same access as members (most inclusive)**: This option gives guests the same access to Microsoft Entra resources and directory data as member users.
+      - **Guest users have limited access to properties and memberships of directory objects**: (Default) This setting blocks guests from certain directory tasks, like enumerating users, groups, or other directory resources. Guests can see membership of all non-hidden groups.
+      - **Guest user access is restricted to properties and memberships of their own directory objects (most restrictive)**: With this setting, guests can access only their own profiles. Guests are not allowed to see other users’ profiles, groups, or group memberships.Screen image displaying guest user access restriction options
 
         ![](../media/new1-5-9.png)
 

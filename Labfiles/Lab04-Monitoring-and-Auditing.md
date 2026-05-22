@@ -71,7 +71,7 @@ In this task, you will configure diagnostic settings on log analytics workspace 
 1. Enter the following details:
 
    - Diagnostic setting name : **Logsinfo (1)**
-   - Check the box for **Auditlogs (2)** and **SignInLogs (3)**.
+   - Check the box for **Auditlogs (2)** and **SignInLogs (3)** under catagories.
    - Under **Destination details**, select the **Send to Log analytics checkbox (4)** and make sure that the log analytics workspace that was created earlier is selected **(5)**.
    - Click on **Save (6)**.
 
@@ -111,7 +111,7 @@ In this task, you will verify the logs collected in the Log Analytics workspace.
 
 1. Select **Logs (1)** option in the left pane and close all the pop-ups until the query pane is visible.
 
-1. Select the mode as **KQL mode (2)**, and in the query pane, run the below queries, to view the activity data ingested into the workspace.
+1. From the dropdown, select the mode as **KQL mode (2)**, and in the query pane, run the below queries, to view the activity data ingested into the workspace.
 
       ```
        AuditLogs
@@ -124,6 +124,7 @@ In this task, you will verify the logs collected in the Log Analytics workspace.
       ```
     
       ![](../media/lab4-6.png)
+      >**Note**: It may take some time for the logs to be ingested into the Log Analytics workspace. If the results are not visible yet, you can verify them at the end of the lab. Meanwhile, please proceed with the next exercise.
 
 ## Summary
 

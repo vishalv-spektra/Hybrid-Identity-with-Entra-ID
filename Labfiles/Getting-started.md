@@ -56,13 +56,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-![](../media/env-0903.png)
+![](../media/ENV_newUI.png)
 
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
 
-![](../media/introp2upd.png)
+![](../media/Split_window.png)
  
 ## Managing Your Virtual Machine
  
@@ -78,11 +78,11 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 ## Let's Get Started with Azure Portal
 
-1. On your Lab virtual machine, click on the **Azure Portal** icon to sign in to the Azure.
+1. On your Lab virtual machine, click on the **Azure Portal** icon to sign in to Azure.
 
     ![](../media/signin0-0903.png) 
 
-1. On the **Sign in** blade, you will see a login screen, in which enter the following email/username and password and then click on **Sign in**.  
+1. On the **Sign in** blade, you will see a login screen, in which you enter the following email/username and password and then click on **Sign in**.  
 
    * **Azure Username/Email**:  <inject key="AzureAdUserEmail"></inject> 
 
@@ -113,6 +113,6 @@ Learner Support Contacts:
 
 Click **Next** from the bottom right corner to embark on your Lab journey!
 
-![](../media/up4.png)
+![](../media/up4-1.png)
 
 ### Happy Learning!!

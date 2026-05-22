@@ -4,7 +4,7 @@
 
 ## Overview 
 
-This lab focuses on configuring Entra Connect with password writeback, updating the minimum password age policy to 0, enabling self-service password reset with authentication methods via Microsoft Entra Admin Center, and validating by changing a password via the My Account page in Microsoft Edge.
+This lab focuses on configuring Entra Connect with password writeback, updating the minimum password age policy to 0, enabling self-service password reset with authentication methods via Microsoft Entra Admin Center, and validating by changing a password via My Account page in Microsoft Edge.
 
 ## Objectives
 
@@ -19,11 +19,11 @@ In this task, you will configure password writeback using Microsoft Entra Connec
 
 1. Select the **Azure AD Connect (1)** application from the LabVM desktop
 
-3. On the **Welcome to Entra Connect Sync** page, select **Configure (2)**.
+1. On the **Welcome to Entra Connect Sync** page, select **Configure (2)**.
 
    ![](../media/lab2-1upd.png)
 
-4. On the **Additional tasks** page, select **Customize synchronization options (1)**, and then select **Next (2)**.
+1. On the **Additional tasks** page, select **Customize synchronization options (1)**, and then select **Next (2)**.
 
    ![](../media/lab2-2upd.png)
 
@@ -33,39 +33,45 @@ In this task, you will configure password writeback using Microsoft Entra Connec
 
 1. Select the **<inject key="AzureAdUserEmail"></inject>** as the username and enter the Temporary Access Pass  **<inject key="AzureAdUserPassword"></inject>** for the password, and then select **Sign in**.
 
-6. On the **Connect to your directories** page, select **Next**.
+1. On the **Connect your directories** page, select **Next**.
 
    ![](../media/lab2-4upd.png)
 
-7. On the **Domain and OU filtering** page, select **Next**.
+1. On the **Domain and OU filtering** page, select **Next**.
 
-8. On the **Optional features** page, select **Password writeback (1)**, and then select **Next (2)**.
+1. On the **Optional features** page, select **Password writeback (1)**, and then select **Next (2)**.
 
     ![](../media/lab2-5upd.png)
 
-9. On the **Ready to configure** page, select **Configure**.
+1. On the **Ready to configure** page, select **Configure**.
 
     ![](../media/lab2-6upd.png)
 
-10. On the **Configuration complete** page, select **Exit**.
+1. When the configuration is completed, select **Exit**.
 
     ![](../media/lab2-7upd.png)
 
-11. Open **Command prompt** in your LabVM and run the below command to update the minimum password age policy to 0.
+1. Search for **cmd (1)** in the **Start** menu and open **Command Prompt (2)** in your LabVM 
+
+    ![](../media/ETS2111.png)
+
+1. Run the below command to update the minimum password age policy to 0.
 
     ```
     secedit /configure /cfg %windir%\inf\defltbase.inf /db defltbase.sdb /verbose
     ```
 
-12. Once updated, click on the **Start (1)** menu, select **Power (2)** button and then select **Restart (3)** to restart the LabVM.
+1. Once updated, click on the **Start (1)** menu, select **Power (2)** button and then select **Restart (3)** to restart the LabVM.
 
     ![](../media/L2T1S12-0903.png)
 
      >**Note**: Wait for 2-3 minutes and then click on "Reconnect" to connect to the LabVM.
 
-13. To verify if the policy is updated, navigate to **Local security policy -> expand Security Settings -> Account Policies -> Password Policy**. The Minimum Password Age should be set to 0.
+1. To verify if the policy is updated, search for **(1)** and select **Local Security Policy (2)** in the **Start** menu 
 
     ![](../media/lab2-9a.png)
+
+1. Expand **Account Policies (1)**, then select **Password Policy (2)** and verify that **Minimum Password Age (3)** has been set to 0 days.
 
     ![](../media/lab2-9upd.png)
 
@@ -79,43 +85,46 @@ In this task, you will enable self-service password reset for users in your tena
     https://entra.microsoft.com/
     ```
 
-2. If prompted, sign in as  **<inject key="AzureAdUserEmail"></inject>**, and use the Temporary Access Pass as **<inject key="AzureAdUserPassword"></inject>**, If the **Stay signed in?** prompt appears, select **No**.  
+1. If prompted, sign in as  **<inject key="AzureAdUserEmail"></inject>**, and use the Temporary Access Pass as **<inject key="AzureAdUserPassword"></inject>**, If the **Stay signed in?** prompt appears, select **No**.  
 
-3. On the **Microsoft Entra admin center**, in the search box, type **password reset (1)**, and then select **Password reset (2)**.
+1. On the **Microsoft Entra admin center**, in the search box, type **Password reset (1)**, and then select **Password reset (2)**.
 
     ![](../media/L2T2S4-0903.png)
 
-5. In the **Password reset | Properties** window, select **All (1)** to enable self-service password reset to all users. Select **Save (2)**.
+1. In the **Password reset | Properties** window, select **All (1)** to enable self-service password reset to all users. Select **Save (2)**.
 
     ![](../media/lab2-t2.png)
+    >**Note**: If it already enabled, please continue to next step
 
-6. On the **Password reset | Properties** blade, select **Authentication methods (1)**.
+1. On the **Password reset | Properties** blade, select **Authentication methods (1)**.
 
-7. For the methods available to users, ensure that **Mobile Phone and Email (2)** are selected, and then select **Security Questions (3)**.
+1. For the **Methods available to users**, ensure that **Mobile Phone and Email (2)** are selected, and then select **Security Questions (3)**.
 
-8. For the **Number of questions required to register (4)**, select **3**.
+1. For the **Number of questions required to register (4)**, select **3**.
 
-9. For the **Number of questions required to reset (5)**, select **3**. Click on select **No security questions configured (6)**.
+1. For the **Number of questions required to reset (5)**, select **3**. Click on select **No security questions configured (6)**.
 
     ![](../media/L2T2S9-0903.png)
 
-10. In the Select security questions, select **Predefined (1)**. Select three questions **(2)** of your choice, and then select **Ok (3)**.
+1. In the **Select security questions** page, select **Predefined (1)**. Select three questions **(2)** of your choice, and then select **Ok (3)**.
 
     ![](../media/L2T2S10.1-0903.png)
 
     ![](../media/L2T2S10.2-0903.png)
 
-11. Select **Ok**. and click on **Save** to save the settings.
+1. Select **Ok**. and click on **Save** to save the settings.
 
-12. Then select **Registration (1)** in the left pane, select **No (2)** for **Require users to register when signing in**, and the select **Save (3)**.
+1. Then select **Registration (1)** in the left pane, select **No (2)** for **Require users to register when signing in**, and the select **Save (3)**.
 
     ![](../media/L2T2S12-0903.png)
 
-13. In the left navigation pane, select **On-premises integration (1)**.
+1. In the left navigation pane, select **On-premises integration (1)**.
 
-14. Verify that your on-premises writeback client is running and select the checkbox for **Write back passwords with Microsoft Entra Connect cloud sync (2)** and then click **Save (3)**.
+1. Verify that your on-premises writeback client is running and select the checkbox for **Write back passwords with Microsoft Entra Connect cloud sync (2)** and then click **Save (3)**.
 
     ![](../media/L2T2S14-0903.png)
+
+    >**Note**: If it already enabled, please continue to next step
 
 ### Task 3: Validate self-service password reset
 
@@ -129,7 +138,7 @@ In this task, you will validate self-service password reset by changing the pass
 
 1. On the **Sign in** page, enter **`msnider@xxxxxx.onmicrosoft.com` (1)** and then select **Next (2)**.
 
-    >**Note**: Replace xxxx with the tenantname provided in the lab credentials.
+    >**Note**: Replace xxxx with the tenant name provided in the lab credentials.
 
     ![](../media/L2T3S2-0903.png)
 
