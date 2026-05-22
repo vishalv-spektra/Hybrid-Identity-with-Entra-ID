@@ -111,7 +111,7 @@ In this task, you will add user accounts to the domain controller in Active Dire
 
 1. In the **Active Directory Users and Computers** console, on the left pane, you will see a hierarchical structure of your domain. This structure represents the organization of your Active Directory environment. 
 
-1. Expand the folder that represents the **Contoso.local (1)** domain and click on **Users (2)** folder. This is where you will create new user accounts for your domain. Click on the **New User (3)** icon to create a new user account.
+1. Expand the folder that represents the **Contoso.local (1)** domain and click on the **Users (2)** folder. This is where you will create new user accounts for your domain. Click on the **New User (3)** icon to create a new user account.
 
    ![](../media/lab1-20.png)
 
