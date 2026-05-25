@@ -29,19 +29,19 @@ In this task, you will set up Active Directory Domain Services on a Windows Serv
 
     ![](../media/lab1-3.png)  
  
-1. At the **Installation Type** checkpoint select **Role-based or feature based installation (1)** radio button and then click **Next (2)**.
+1. On the **Installation Type** checkpoint, select **Role-based or feature based installation (1)** radio button and then click **Next (2)**.
 
    ![](../media/lab1-4.png)
    
-1. On the **Server Selection** checkpoint, select a **server from the server pool (1)** radio button. This lists a server installed on your machine. Please, click on the desired server once to select it and click **Next (2)**.
+1. On the **Server Selection** checkpoint, select a **server from the server pool (1)** radio button. This lists a server installed on your machine. Please click on the desired server once to select it and click **Next (2)**.
 
    ![](../media/lab1-5.png)
    
-1. At the **Server Roles** checkpoint, in the centre of the window, there is a list of all the roles that you can assign to your server machine. Select **Active Directory Domain Services (1)**. A pop-up window will be displayed. This is the checkpoint for adding new features. Navigate on the **Add features (2)** button at the bottom of the window, and then click on **Next**.
+1. On the **Server Roles** checkpoint, in the centre of the window, there is a list of all the roles that you can assign to your server machine. Select **Active Directory Domain Services (1)**. A pop-up window will be displayed. This is the checkpoint for adding new features. Click on the **Add features (2)** button at the bottom of the window, and then click on **Next**.
 
    ![](../media/lab1-6.png)
    
-1. In the **Features** checkpoint, simply click **Next** without making modifications to any other settings.
+1. On the **Features** checkpoint, simply click **Next** without making modifications to any other settings.
 
    ![](../media/lab1-7.png) 
   
@@ -49,12 +49,13 @@ In this task, you will set up Active Directory Domain Services on a Windows Serv
 
    ![](../media/lab1-8.png)
     
-1. You will see a summary of your selected options here. Have a look at them carefully and if you think you’ve made a mistake at any of the earlier checkpoints, you can go back and fix it by clicking **< Previous**. Then, click the **Install** button once you’re satisfied with your selections at the **Confirmation** checkpoint.
+1. You will see a summary of your selected options here. Have a look at them carefully and if you think you have made a mistake at any of the earlier checkpoints, you can go back and fix it by clicking **< Previous**. Then, click the **Install** button once you are satisfied with your selections at the **Confirmation** checkpoint.
 
    ![](../media/lab1-9.png) 
   
-1. The wizard will then begin installation. The time of installation depends on your machine’s hardware configuration and what features you’ve selected to be installed. Please make sure not to interrupt the installation. Once the installation is succeeded, click the **Close** button.
+1. The wizard will then begin installation. The time of installation depends on your machine’s hardware configuration and what features you have selected to be installed. Please make sure not to interrupt the installation. Once you get the message **Configuration required. Installation succeeded on labvm-<inject key="DeploymentID" enableCopy="false"/>**, click on **Close** button.
 
+   ![](../media/ETS1110.png)
    >**Note:** The installation may take around 2-3 minutes to complete. 
   
 1. On the **Server Manager** dashboard, you should see a yellow triangle warning sign on the top right of the window near the menu bar. This sign appears only if Active Directory Domain Services was properly installed.
@@ -66,35 +67,35 @@ In this task, you will set up Active Directory Domain Services on a Windows Serv
 
    ![](../media/lab1-11.png)
  
-1. At the first checkpoint **Deployment Configuration**, please select the **Add a new forest (1)** radio button and enter your root domain name as **Contoso.local (2)**. Then click **Next (3)**.
+1. On the first checkpoint **Deployment Configuration**, please select the **Add a new forest (1)** radio button and enter your root domain name as **Contoso.local (2)**. Then click **Next (3)**.
 
-   ![](../media/lab1-12.png) 
+   ![](../media/ETS1114.png) 
 
-1. At the **Domain Controller Options** checkpoint, leave all the settings untouched and enter your desired password in the **Directory Services Restore Mode (DSRM) password** and **Confirm password** **(1)** textboxes. Then click **Next (2)**.
+1. On the **Domain Controller Options** checkpoint, leave all the settings untouched and enter your desired password in the **Directory Services Restore Mode (DSRM) password** and **Confirm password** **(1)** textboxes. Then click **Next (2)**.
 
    >**Note:** Make sure to keep a note of this password, as changing it later on is troublesome.
 
-   ![](../media/lab1-13.png)
+   ![](../media/ETS1115.png)
  
-1. On the **DNS Options** page, you will see an error message stating that there’s no parent zone found, and no delegation for your DNS server could be created. Ignore this message and click the **Next** button, leaving all the settings at this checkpoint unchanged.
+1. On the **DNS Options** checkpoint, you will see an error message stating that there’s no parent zone found, and no delegation for your DNS server could be created. Ignore this message and click the **Next** button, leaving all the settings at this checkpoint unchanged.
 
-   ![](../media/lab1-14.png)
+   ![](../media/ETS1116.png)
 
-1. On the **Additional Options** page, enter **CONTOSO** as the NetBIOS domain name in the given textbox. Click **Next**.
+1. On the **Additional Options** checkpoint, enter **CONTOSO (1)** on the `NetBIOS domain name` textbox. Then click **Next (2)**.
 
    ![](../media/L1T1S18-0903.png)
 
-1. Three or more paths will be listed on your screen. Do not change these paths. You’re not required to keep a note of these paths either. Click **Next**.
+1. Three or more paths will be listed on your screen. Do not change these paths. You are not required to keep a note of these paths either. Click **Next**.
 
-   ![](../media/lab1-16.png)
+   ![](../media/ETS1118.png)
 
-1. Whatever options you’ve selected so far will be listed on the configuration wizard at this checkpoint. Have a look at them and if needed, move to the previous checkpoints using the **< Previous** button and make the desired changes. Once you’re satisfied with the selected options, click **Next** on the **Review Options**.
+1. Whatever options you have selected so far will be listed on the configuration wizard at the **Review Options** checkpoint. Have a look at them and if needed, move to the previous checkpoints using the **< Previous** button and make the desired changes. Once you’re satisfied with the selected options, click **Next**.
 
-   ![](../media/lab1-17.png)
+   ![](../media/ETS1119.png)
 
-1. Next, head to the **Prerequisites Check** checkpoint. At this stage, you’ll see if all the prerequisite checks were completed. If not, then a list of errors will be displayed in the window. If there are any errors, you’ll need to go to the stated checkpoint and fix the errors. Once you’ve fixed all the errors, a green check mark with a success message will be displayed. Then click **Install** to begin the installation.
+1. Next, head to the **Prerequisites Check** checkpoint. At this stage, you will see if all the prerequisite checks were completed. If not, then a list of errors will be displayed in the window. If there are any errors, you will need to go to the stated checkpoint and fix the errors. Once you have fixed all the errors, a green check mark with a success message will be displayed. Then click **Install** to begin the installation.
 
-   ![](../media/lab1-18.png)
+   ![](../media/ETS1120.png)
 
 1. Once the installation is completed, your LabVM will automatically restart. 
 
@@ -104,13 +105,13 @@ In this task, you will set up Active Directory Domain Services on a Windows Serv
 
 In this task, you will add user accounts to the domain controller in Active Directory Users and Computers. You will create new user accounts with specified names, usernames, and passwords. By adding users to the domain controller, you will ensure that they have access to resources within the domain and can authenticate against Active Directory.
 
-1. In your LabVM, go to **Start > Windows Administrative Tools > Active Directory Users and Computers**.
+1. In your LabVM, go to **Start (1)** and click on **Windows Administrative Tools (2)**. Then double-click on **Active Directory Users and Computers (3)**.
 
    ![](../media/lab1-19.png)
 
 1. In the **Active Directory Users and Computers** console, on the left pane, you will see a hierarchical structure of your domain. This structure represents the organization of your Active Directory environment. 
 
-1. Expand the folder that represents the **Contoso.local (1)** domain and expand the **Users (2)** folder. This is where you will create new user accounts for your domain. Click on the **New User (3)** option to create a new user account.
+1. Expand the folder that represents the **Contoso.local (1)** domain and click on the **Users (2)** folder. This is where you will create new user accounts for your domain. Click on the **New User (3)** icon to create a new user account.
 
    ![](../media/lab1-20.png)
 
@@ -151,9 +152,10 @@ In this task, you will configure directory synchronization between your on-premi
 
    ![](../media/L1T3S3-0903.png)
 
-1. Scroll down and select **Download Connect Sync Agent** on the manage page. 
+1. Scroll down and click on **Download Connect Sync Agent** on the Manage tab. 
 
    ![](../media/L1T3S4-0903.png)
+   >**Note**: Please make sure that you have clicked on the **Download Connect Sync Agent** option
 
 1. Click on **Accept terms & download**
 
@@ -177,11 +179,11 @@ In this task, you will configure directory synchronization between your on-premi
 
 1. You will be navigated to a pop-up for signing in to a Microsoft Account. 
 
-   - Enter UserName/Email: **<inject key="AzureAdUserEmail"></inject>**
+   - Enter UserName/Email: **<inject key="AzureAdUserEmail"></inject>** and click on **Next**.
 
       ![](../media/signin1-0903.png)
 
-   - Enter Temporary Access Pass: **<inject key="AzureAdUserPassword"></inject>**
+   - Enter Temporary Access Pass: **<inject key="AzureAdUserPassword"></inject>** and click on **Sign in**.
    
       ![](../media/signin2-0903.png)
 
@@ -197,7 +199,7 @@ In this task, you will configure directory synchronization between your on-premi
 
    ![](../media/lab1-30upd.png)
 
-1. When configuration is complete, select **Exit**.  
+1. When the configuration is completed, select **Exit**.  
 
    ![](../media/lab1-31upd.png)
      
@@ -235,4 +237,4 @@ In this task, you will verify the synchronization of identities in Microsoft Ent
 In this lab, you have set up a hybrid identity solution by configuring on-premises Active Directory and synchronizing it with Microsoft Entra. You have successfully installed Active Directory Domain Services, created user accounts in the domain controller, configured directory synchronization using Microsoft Entra Connect, and verified the synchronization of identities in Microsoft Entra. This foundational setup enables seamless access to resources across both on-premises and cloud environments, providing a unified identity management experience.
 
 #### You have successfully completed the lab. Click on Next >> to proceed with the next lab.
-   ![](../media/up4.png)
+   ![](../media/up4-1.png)
