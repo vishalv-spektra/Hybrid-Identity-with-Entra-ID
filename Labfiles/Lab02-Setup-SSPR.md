@@ -94,7 +94,8 @@ In this task, you will enable self-service password reset for users in your tena
 1. In the **Password reset | Properties** window, select **All (1)** to enable self-service password reset to all users. Select **Save (2)**.
 
     ![](../media/lab2-t2.png)
-    >**Note**: If it already enabled, please continue to next step
+    
+    >**Note**: If it already enabled, please continue to next step. If you encounter the error "Failed to save password reset policy – Unexpected error when saving password reset policy" while saving the configuration, please ignore the message and wait a few minutes before trying again. This issue may occur due to temporary backend synchronization or service delays. Retry the action after a short interval until the configuration is successfully applied
 
 1. On the **Password reset | Properties** blade, select **Authentication methods (1)**.
 
