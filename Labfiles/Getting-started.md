@@ -2,13 +2,17 @@
 
 #### Overall Estimated Duration: 4 Hours
 
-## Overview
+## Lab Scenario
+
+Contoso Ltd. is modernizing its identity infrastructure by adopting a Hybrid Identity solution that integrates on-premises Active Directory Domain Services (AD DS) with Microsoft Entra ID. As a Hybrid Identity Administrator, you will configure identity synchronization using Microsoft Entra Connect, enable Self-Service Password Reset (SSPR) with password writeback, implement Privileged Identity Management (PIM) for secure role assignments, configure monitoring and auditing through Azure Monitor and Log Analytics, and establish governance controls using Access Reviews and external collaboration settings. By the end of this lab, you will have deployed a secure, scalable, and well-governed hybrid identity environment that supports both on-premises and cloud resources.
+
+## Lab Overview
 
 In this lab, you will explore the complete Hybrid Identity experience with Entra ID. You will work through hands-on labs designed to strengthen your organization's security posture by configuring passwordless authentication, access reviews, external collaboration, conditional access policies, monitoring, auditing, and Privileged Identity Management (PIM). You will also learn how to enable self-service password reset (SSPR) and seamlessly integrate on-premises Active Directory with Entra ID to implement a robust hybrid identity solution. 
 
 Through guided steps and practical scenarios, this lab will equip you with the skills needed to secure and manage identities across both on-premises and cloud environments.
 
-## Objectives
+## Lab Objectives
 
 By completing this lab series, you will have comprehensive knowledge of designing, deploying, and managing a **Hybrid Identity** solution with **Microsoft Entra ID** for enterprise-scale adoption:
 
@@ -18,7 +22,7 @@ By completing this lab series, you will have comprehensive knowledge of designin
 - Create a **Log Analytics Workspace** and configure **diagnostic settings** to collect and analyze **Entra ID audit and sign-in logs**.
 - Create **security groups**, configure **recurring access reviews**, and set up **external collaboration** with **guest user access controls**.
 
-## Architecture
+## Architecture Explaination
 
 - **Hybrid Identity Framework** integrates on-premises Active Directory with Microsoft Entra ID to enable enterprise-scale identity management and governance. **Active Directory Domain Services (AD DS)** serves as the on-premises identity foundation, managing users, groups, and resources within the corporate network. **Microsoft Entra Connect** facilitates seamless directory synchronization between on-premises AD and Microsoft Entra ID, enabling unified identity management across cloud and on-premises environments.
 
@@ -72,7 +76,7 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
 
 ## Lab Guide Zoom In/Zoom Out
  
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+To adjust the zoom level for the environment page, click the **A↕** icon located next to the timer in the lab environment.
 
 ![](../media/zoomin.png)
 
@@ -94,7 +98,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
   
 1. If you see the pop-up **Stay Signed in?** click **Yes**.
 
-    ![](../media/g3.jpg)
+    ![](../media/g3.png)
 
 1. If you see the pop-up **You have free Azure Advisor recommendations!** close the window to continue the lab. 
 

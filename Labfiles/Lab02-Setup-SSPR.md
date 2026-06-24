@@ -2,6 +2,10 @@
 
 #### Estimated Duration: 60 Minutes
 
+## Scenario
+
+Contoso Ltd. wants to reduce help desk workload and improve user productivity by enabling users to securely reset their own passwords. As an Identity Administrator, you will configure password writeback in Microsoft Entra Connect, update the on-premises password policy to support password resets, and enable Self-Service Password Reset (SSPR) in Microsoft Entra ID. You will then validate the solution by performing a password reset through the My Account portal and confirming that the password change is synchronized between Microsoft Entra ID and on-premises Active Directory.
+
 ## Overview 
 
 This lab focuses on configuring Entra Connect with password writeback, updating the minimum password age policy to 0, enabling self-service password reset with authentication methods via Microsoft Entra Admin Center, and validating by changing a password via My Account page in Microsoft Edge.
@@ -185,4 +189,4 @@ In this task, you will validate self-service password reset by changing the pass
 In this lab, you have configured self-service password reset for user accounts in Entra ID. You enabled password writeback using Microsoft Entra Connect, updated the minimum password age policy to allow immediate password changes, and configured self-service password reset options, including authentication methods and registration requirements. Finally, you validated the self-service password reset process by successfully changing a user's password through the My Account page. This setup empowers users to manage their passwords securely and reduces the administrative overhead of password resets.
 
 #### You have successfully completed the lab. Click on Next >> to proceed with the next lab.
-   ![](../media/up4-1.png)
+   ![](../media/np3.png)

@@ -2,6 +2,10 @@
 
 #### Estimated Duration: 30 Minutes
 
+## Scenario
+
+Contoso Ltd. requires enhanced visibility into identity-related activities to meet security, auditing, and compliance requirements. As a Security Administrator, you will create a Log Analytics Workspace and configure Microsoft Entra ID diagnostic settings to collect audit and sign-in logs. You will then verify that the logs are successfully ingested and available for analysis, enabling the organization to monitor user activities, investigate security events, and support compliance reporting.
+
 ## Overview 
 This lab focuses on setting up a  Log Analytics workspace in Azure to store and analyze logs from Azure Arc-enabled machines. Configure diagnostic settings in Microsoft Entra ID to collect audit and sign-in logs, directing them to the created workspace.
 
@@ -95,7 +99,7 @@ In this task, you will configure diagnostic settings on log analytics workspace 
   
 1. If you see the pop-up **Stay Signed in?** click **No**.
 
-    ![](../media/g3-1.png)
+    ![](../media/g3-1-new.png)
 
 1. Once it is logged into Azure portal successfully, close the InPrivate window.
 
@@ -132,4 +136,4 @@ In this lab, you have successfully created a Log Analytics workspace, configured
 
 #### You have successfully completed the lab. Click on Next >> to proceed with the next lab.
 
-   ![](../media/up4-1.png)
+   ![](../media/np5.png)
