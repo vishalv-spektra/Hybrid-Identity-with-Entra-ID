@@ -121,22 +121,26 @@ In this task, you will add user accounts to the domain controller in Active Dire
 
 1. Enter the following to create the users listed below: 
 
-      | Name           | User Name                | Password   | 
+      | Name           | User logon name                | Password   | 
       | -------------- | ------------------------ | ---------- |
       | Edmund Reeve   | `ereeve@Contoso.local`   | Pa55-w.rd! |
       | Miranda Snider | `msnider@Contoso.local`  | Pa55-w.rd! | 
       | Allan Deyoung  | `AllanD@Contoso.local`   | Pa55-w.rd! | 
       | Joni Sherman   | `JoniS@Contoso.local`    | Pa55-w.rd! | 
 
-1. Please find the images below indicating the user creation process. Repeat these steps to create all users.
+1. Please find the steps below indicating the user creation process. Repeat these steps to create all users.
     
-   >**Note:** Make sure to uncheck the **User must change the Password at next logon** setting
+   - Enter the required details, including **First Name(1)** and **User Logon Name(2)**, and then select **Next(3)**.     
 
-    ![](../media/lab1-21.png)
+      ![](../media/lab1-21.png)
+
+   - Enter the **Password and Confirm(4)**, uncheck the **User must change password at next logon(5)** checkbox, and then select **Next(6)**.
   
-    ![](../media/L1T2S4.2-0903.png)
+      ![](../media/L1T2S4.2-0903.png)
+
+   - Select **Finish(7)** to complete the user creation process.
   
-    ![](../media/L1T2S4.3-0903.png)
+      ![](../media/L1T2S4.3-0903.png)
 
 1. Similarly, create the other users as well. 
 

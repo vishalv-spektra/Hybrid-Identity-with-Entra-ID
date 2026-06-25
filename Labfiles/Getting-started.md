@@ -46,11 +46,19 @@ By completing this lab series, you will have comprehensive knowledge of designin
 
 - **Azure Log Analytics:** Azure Log Analytics is a powerful tool within Azure Monitor that collects and queries logs from various Azure services, on-premises resources, and third-party sources. It provides deep insights into application health, performance, security events, and user behavior through Kusto Query Language (KQL), enabling investigation, alerting, and compliance reporting for security and operational purposes.
 
+- **Self-Service Password Reset (SSPR):** Self-Service Password Reset enables users to securely reset or unlock their passwords without administrator intervention. When integrated with Microsoft Entra ID and configured with password writeback, password changes performed in the cloud are synchronized back to the on-premises Active Directory environment. This capability improves user productivity, reduces helpdesk workload, and ensures a consistent password experience across hybrid environments.
+
+- **Privileged Identity Management (PIM):** Microsoft Entra Privileged Identity Management provides just-in-time and time-bound privileged access to Azure resources, Microsoft Entra roles, and other critical services. PIM helps organizations minimize standing administrative privileges by requiring role activation, approval workflows, multifactor authentication, and justification before elevated permissions are granted. It also provides auditing and reporting capabilities to enhance security, compliance, and governance.
+
+## Getting Started with the Lab
+
+Welcome to your Hybrid Identity with Entra ID workshop! In this lab, you will explore how to integrate on-premises Active Directory Domain Services (AD DS) with Microsoft Entra ID to build a secure hybrid identity solution. You will gain hands-on experience with identity synchronization, Self-Service Password Reset (SSPR), Privileged Identity Management (PIM), monitoring and auditing, and governance controls to securely manage identities and access across both on-premises and cloud environments.
+
 ## Accessing Your Lab Environment
 
 Once you are ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-![](../media/intropupd.png)
+![](../media/intronew.png)
 
 ### Virtual Machine & Lab Guide
  
