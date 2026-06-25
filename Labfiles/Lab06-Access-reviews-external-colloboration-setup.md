@@ -186,7 +186,7 @@ In this task, you will review and manage user access to groups and applications 
 
 ## Exercise 2: Configure external collaboration settings
 
-### Task 1 - Enable Guest Users to perform self service sign-up
+### Task 1: Enable Guest Users to perform self service sign-up
 
 In this task, you will configure settings to allow guest users to sign up for access on their own in Microsoft Entra by enabling the self-service sign-up feature.
 
@@ -211,7 +211,7 @@ In this task, you will configure settings to allow guest users to sign up for ac
 
     ![](../media/L5E2T1S5-0903.png)
 
-### Task 2 - Configure external collaboration settings
+### Task 2: Configure external collaboration settings
 
 In this task, you will configure external collaboration settings by enabling email one-time passcode notifications, setting guest user access levels, specifying who can invite guest users, and configuring collaboration restrictions.
 

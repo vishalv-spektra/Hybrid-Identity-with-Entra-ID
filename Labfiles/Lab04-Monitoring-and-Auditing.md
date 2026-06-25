@@ -17,7 +17,7 @@ In this lab, you will perform the following:
 - Task 2: Add Diagnostic setting to collect audit and signin logs
 - Task 3: Verify the logs in the workspace
 
-### Task 1 - Create Log Analytics Workspace
+### Task 1: Create Log Analytics Workspace
 
 In this task, you will create a Log Analytics workspace to store the log information and analyze the machines onboarded through Azure Arc.
 
@@ -56,7 +56,7 @@ In this task, you will create a Log Analytics workspace to store the log informa
 
     <validation step="abc96da1-739e-47e8-a627-b36299a4f02b" />
 
-### Task 2 - Add Diagnostic setting to collect audit and signin logs
+### Task 2: Add Diagnostic setting to collect audit and signin logs
 
 In this task, you will configure diagnostic settings on log analytics workspace to collect audit and sign-in logs.
 
@@ -105,7 +105,7 @@ In this task, you will configure diagnostic settings on log analytics workspace 
 
    >**Note**: Wait for about 15 mins for logs ingestion to happen and proceed with the next task.
 
-### Task 3 - Verify the logs in the workspace
+### Task 3: Verify the logs in the workspace
 
 In this task, you will verify the logs collected in the Log Analytics workspace.
 

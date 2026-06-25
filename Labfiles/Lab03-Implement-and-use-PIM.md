@@ -16,7 +16,7 @@ In this lab, you will perform the following:
 - Task 1: Assign Azure resource roles
 - Task 2: Update or remove an existing Entra role assignment
 
-### Task 1 - Assign Azure resource roles
+### Task 1: Assign Azure resource roles
 
 In this task, you will assign the Global Administrator role to the users from Microsft Entra portal. 
 
@@ -76,7 +76,7 @@ In this task, you will assign the Global Administrator role to the users from Mi
 
 1. After the new role assignment is created, a status notification is displayed.
 
-### Task 2 - Update or remove an existing Entra role assignment
+### Task 2: Update or remove an existing Entra role assignment
 
 In this task, you will update and remove an existing Entra role assignment as needed. 
 
